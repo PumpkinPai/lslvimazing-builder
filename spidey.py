@@ -4,13 +4,25 @@
 # 'delim' immediately following the beginning of 'searchterm'
 
 import urllib.request
+import os
+
 # Crawl url, look for searchTerm, grab thing within delim, put it in txtFile
 def wikiCrawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
+    # temp- we now have decent files to play with
+    return
+
     print('Like sands through the hourglass, so are the bytes of our hives...')
+    print('Building ' + txtFile)
     multi = True
     multiQuery = ''
+    # clear text file
+    try:
+        os.remove(txtFile)
+    except: pass
+
     try:
         while multi:
+            print('Going to: ' + url+multiQuery)
             response = urllib.request.urlopen(url+multiQuery)
             html = str(response.read())
             # Make it just the nectar within pageBegin and pageEnd
@@ -23,83 +35,132 @@ def wikiCrawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
             html = html.replace('> <', '><')
 
             # If the category spans multiple pages, cry
-            multi = html.find('&pagefrom=')
+            multi = html.find('pagefrom=')
+            # we need this link for the next time around
+            startMulti = html.find('=', multi) + 1
+            endMulti   = html.find('"', startMulti + 1)
+            multiQuery = html[startMulti:endMulti]
+
             if multi > 0: multi = True
             else: multi = False
 
+            foundList = []
             saveFile = open(txtFile, 'a')
-            while html:
+            while True:
                 startFind  = html.find(searchTerm) + len(searchTerm)
                 startFound = html.find(delim[0], startFind)
                 endFound   = html.find(delim[1], startFound + 1)
                 found      = html[startFound + 1 : endFound]
                 html       = html[endFound:]
                 if found:
-                    saveFile.write(found + '\n')
+                    foundList.append(found)
                 else:
+                    foundTxt = '\n'.join(foundList) + '\n'
+                    saveFile.write(foundTxt)
                     saveFile.close
-                    if multi: multiQuery = '&pagefrom=' + found
-                    return True 
-
+                    break
+                     
     except Exception as e:
         print(str(e))
         return False
 
 
-# todo- use this function to replace all of the following (might be more
-# trouble than it's worth
-def cleanup(dirtyFile, startsWith):
-    pass
-
 def cleanFunctions(dirtyFile):
     print('Cleaning lsl functon results...')
-    readFile = open(dirtyFile, 'r')
-    txt = ''
-    additions = 0
-    firstAddition = ''
-    lastAddition = ''
+    try:
+        readFile = open(dirtyFile, 'r')
+    except Exception as e:
+        print(str(e))
+        return
+    # make a list out of the file
+    resultList = []
     for line in readFile:
-        if True: # (line[0].islower()):
-            txt = txt + line
-            additions += 1
-            if firstAddition == '': firstAddition = line.replace('\n','')
-            lastAddition = line.replace('\n','')
+        # make it 'll' instead of 'Ll'
+        line = line[0].lower() + line[1:]
+        resultList.append(line.strip('\n'))
+    
+    resultList = cleanList(resultList)
     
     readFile.close
+    resultTxt = '\n'.join(resultList)
     writeFile = open(dirtyFile, 'w')
-    writeFile.write(txt)
+    writeFile.write(resultTxt)
     writeFile.close
-    print('Finished getting ' + str(additions) + ' functions!')
-    print('From ' + firstAddition + ' to ' + lastAddition)
+    print('Finished getting ' + str(len(resultList)) + ' functions!')
+    print('From ' + resultList[0] + ' to ' + resultList[-1])
 
 
 def cleanEvents(dirtyFile):
     print('Cleaning lsl event results...')
-    readFile = open(dirtyFile, 'r')
-    txt = ''
-    additions = 0
-    firstAddition = ''
-    lastAddition = ''
+    try:
+        readFile = open(dirtyFile, 'r')
+    except Exception as e: 
+        print(str(e))
+        return
+
+    # Make a list of the file
+    resultList = []
     for line in readFile:
-        if (line[0:3] != 'LSL'):
-            line = line.replace(' ', '_')
-            txt = txt + line.lower()
-            additions += 1
-            if firstAddition == '': firstAddition = line.replace('\n', '')
-            lastAddition = line.replace('\n', '')
-        if line.lower() == 'transaction_result\n':
-            break
-    
+        resultList.append(line.strip('\n'))
+
+    resultList = cleanList(resultList)
+    # 'state_entry' vs 'state entry'
+    for i in range(len(resultList)):
+        resultList[i] = resultList[i].replace(' ', '_')
+        resultList[i] = resultList[i].lower()
+
     readFile.close
+    resultTxt = '\n'.join(resultList)
     writeFile = open(dirtyFile, 'w')
-    writeFile.write(txt)
+    writeFile.write(resultTxt)
     writeFile.close
-    print('Finished getting ' + str(additions) + ' events!')
-    print('From ' + firstAddition + ' to ' + lastAddition)
+    print('Finished getting ' + str(len(resultList)) + ' events!')
+    print('From ' + resultList[0] + ' to ' + resultList[-1])
 
 
 def cleanConstants(dirtyFile):
-    pass
+    print('Cleaning lsl constant results...')
+    try:
+        readFile = open(dirtyFile, 'r')
+    except Exception as e: 
+        print(str(e))
+        return
+
+    # Make a list of the file
+    resultList = []
+    for line in readFile:
+       resultList.append(line.strip('\n'))
+
+    resultList = cleanList(resultList)
+    # 'LINK_ROOT' vs 'LINK ROOT'
+    for i in range(len(resultList)):
+        resultList[i] = resultList[i].replace(' ', '_')
+        resultList[i] = resultList[i].upper()
+
+    readFile.close
+    resultTxt = '\n'.join(resultList)
+    writeFile = open(dirtyFile, 'w')
+    writeFile.write(resultTxt)
+    writeFile.close
+    print('Finished getting ' + str(len(resultList)) + ' constants!')
+    print('From ' + resultList[0] + ' to ' + resultList[-1])
+
+
+# Removes duplicates and garbage lines
+def cleanList(dirtyList):
+    cleanList = []
+    ignoreList = ['\\n', '(', '(previous 200) (', 'next 200', 'previous 200', 
+                  '(previous 200) (next 200)\\n'] 
+    for txt in dirtyList:
+        dirty = False
+        if txt in cleanList:  dirty = True
+        if txt.lower() in ignoreList: dirty = True
+        if dirty == False:
+            cleanList.append(txt)
+
+    return cleanList
+
+
 
 if __name__ == "__main__":
     print('The main file is "buildit.py" Run that instead.')
