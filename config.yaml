@@ -2,21 +2,36 @@
 # plugin.  This should make building syntax files for other editors easier.
 
 pluginName: lslvimazing
-pluginLocation: ''                  # Empty string is same dir as lslvimazing-builder
 editor: vim
 structure:
-  dirs:
-    -ftdetect
-       source: plug-ftdetect.txt    # Puts txt contents in pluginName/ftdetect/lsl.vim
-       name: lsl.vim
-     ftplugin
-       contents: plug-ftplugin.txt
-       name: lsl.vim
-     indent
-       contents: plug-indent.txt
-       name: lsl.vim
-     syntax
-       contents: plug-syntax.txt
-       name: lsl.vim
-  xtra:
-    -README.md
+- name: ftdetect  
+  source: plug-ftdetect.txt
+  file: lsl.vim
+  directory: lslvimazing/ftdetect
+- name: ftplugin
+  contents: plug-ftplugin.txt
+  file: lsl.vim
+  directory: lslvimazing/ftplugin
+- name: indent
+  contents: plug-indent.txt
+  file: lsl.vim
+  directory: lslvimazing/indent
+- name: syntax
+  contents: plug-syntax.txt
+  file: lsl.vim
+  directory: lslvimazing/syntax
+- name: root
+  contents: plug-README.md
+  file: README.md
+  directory: lslvimazing
+
+scraper:
+  url: http://wiki.secondlife.com/w/index.php?title=Category:
+  pageBegin: 'Pages in category'
+  pageEnd: 'class="printfooter"'
+  searchTerm: '<li><a href="/wiki/'
+  delim: ['>','<']
+  queries:
+  - name: LSL_Functions
+    page: LSL_Functions&pagefrom=
+    rules:

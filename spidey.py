@@ -64,6 +64,41 @@ def wikiCrawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
         print(str(e))
         return False
 
+def cleanResults(dirtyFile, specialRules, ignoreList):
+    print('Cleaning results...')
+    try:
+        readFile = open(dirtyFile, 'r')
+    except Exception as e:
+        print(str(e))
+        return
+    resultList = []
+    for line in readFile:
+        resultList.append(line.strip('\n')
+
+    # Round 1, replicants and ignorables
+    cleanList = []
+    for txt in resultList:
+        dirty = False                       # Assume they took a bath
+        if txt in cleanList: dirty = True   # She's a replicant
+        if txt.lower() in ignoreList: dirty = True
+        if dirty == False:
+            cleanList.append(txt)
+
+    # Round 2 for specialRules
+    resultList = cleanList
+    cleanList = []
+    for rule in specialRules:
+        for txt in resultList:
+            if rule == 'caps':
+                txt = txt.upper()
+            else if rule == 'lower':
+                txt = txt.lower()
+            else if rule == 'firstLower':
+                txt = txt[0].lower() + txt[1:] 
+            else if rule == 'replace'
+                txt = txt.replace(rule['find'], rule['replacement'])
+
+
 
 def cleanFunctions(dirtyFile):
     print('Cleaning lsl functon results...')

@@ -11,25 +11,17 @@
 ##############################################################################
 
 import spidey
-
-# Gets the list of lsl functions
-def getFunctions():
-    targetFile = 'lslFunctions.txt'
-    url = 'http://wiki.secondlife.com/wiki/Category:LSL_Functions'
-    searchTerm = '<li><a href="/wiki/'
-    delim = ['>','<']
-    spidey.crawl(url, searchTerm, delim, targetFile)
-    spidey.cleanFunctions(targetFile)
+import os
+import yaml
 
 
 if __name__ == "__main__":
 
+    confFile = open('config.yaml', 'r')
+    conf = yaml.load(confFile)
+
     # Go get 'em!
-    url     = 'http://wiki.secondlife.com/w/index.php?title=Category:'
-    pageBegin = 'Pages in category'
-    pageEnd = 'class="printfooter"'
-    searchTerm = '<li><a href="/wiki/'
-    delim = ['>','<']
+    # todo- loop through the conf['scraper','queries']
 
     # Get Functions
     page    = 'LSL_Functions&pagefrom='
@@ -53,5 +45,9 @@ if __name__ == "__main__":
     operatorsFile   = 'LSL_Operators.txt'
     typesFile       = 'LSL_Types.txt'
     flowFile        = 'LSL_Flow.txt'
+
+    # Create the plugin tree and put files where they go
+    for txt in conf['structure']:
+        print(txt['name'])
 
 
