@@ -7,12 +7,10 @@ import urllib.request
 import os
 
 # Crawl url, look for searchTerm, grab thing within delim, put it in txtFile
-def wikiCrawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
+def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
     # temp- we now have decent files to play with
     return
 
-    print('Like sands through the hourglass, so are the bytes of our hives...')
-    print('Building ' + txtFile)
     multi = True
     multiQuery = ''
     # clear text file
@@ -65,7 +63,6 @@ def wikiCrawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
         return False
 
 def cleanResults(dirtyFile, specialRules, ignoreList):
-    print('Cleaning results...')
     try:
         readFile = open(dirtyFile, 'r')
     except Exception as e:
@@ -73,7 +70,7 @@ def cleanResults(dirtyFile, specialRules, ignoreList):
         return
     resultList = []
     for line in readFile:
-        resultList.append(line.strip('\n')
+        resultList.append(line.strip('\n'))
 
     # Round 1, replicants and ignorables
     cleanList = []
@@ -91,13 +88,22 @@ def cleanResults(dirtyFile, specialRules, ignoreList):
         for txt in resultList:
             if rule == 'caps':
                 txt = txt.upper()
-            else if rule == 'lower':
+            elif rule == 'lower':
                 txt = txt.lower()
-            else if rule == 'firstLower':
+            elif rule == 'firstLower':
                 txt = txt[0].lower() + txt[1:] 
-            else if rule == 'replace'
+            elif rule == 'replace':
                 txt = txt.replace(rule['find'], rule['replacement'])
+            cleanList.append(txt)
 
+    readFile.close
+    resultTxt = '\n'.join(cleanList)
+    writeFile = open(txtFile, 'w')
+    writeFile.write(resultTxt)
+    writeFile.close
+    
+    # return number, first and last
+    return str(len(resultList)), resultList[0], resultList[1]
 
 
 def cleanFunctions(dirtyFile):

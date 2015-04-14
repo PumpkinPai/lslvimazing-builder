@@ -22,6 +22,24 @@ if __name__ == "__main__":
 
     # Go get 'em!
     # todo- loop through the conf['scraper','queries']
+    for r in conf['scraper','queries']:
+        url     = conf['scraper','url'] + query
+        begin   = conf['scraper','pageBegin']
+        end     = conf['scraper','pageEnd']
+        search  = conf['scraper','searchTerm']
+        delim   = conf['scraper','delim']
+        page    = r['name']
+        query   = r['query']
+        rules   = r['rules']
+        ignore  = r['ignore']
+        txtFile = page + '.txt'
+        print('Getting ' + url)
+        # spidey.crawl(url, begin, end, search, delim, txtFile)
+        print('Cleaning ' + txtFile)
+        count, first, last = spidey.cleanResults(txtFile, rules, ignore)
+        print('Captured ' + str(count) + ' results from ' + first + ' to ' + last)
+
+    exit()
 
     # Get Functions
     page    = 'LSL_Functions&pagefrom='

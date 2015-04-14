@@ -31,7 +31,16 @@ scraper:
   pageEnd: 'class="printfooter"'
   searchTerm: '<li><a href="/wiki/'
   delim: ['>','<']
+  ignore: ['\\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\\n']
   queries:
   - name: LSL_Functions
     page: LSL_Functions&pagefrom=
     rules:
+    - rule: firstLower
+  - name: LSL_Events
+    page: LSL_Events&pagefrom=
+    rules:
+    - rule: lower
+    - rule: replace
+        find: ' '
+        replacement: _
