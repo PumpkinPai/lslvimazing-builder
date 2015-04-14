@@ -20,6 +20,11 @@ if __name__ == "__main__":
     confFile = open('config.yaml', 'r')
     conf = yaml.load(confFile)
 
+    depFile = conf['scraper']['depFile']
+    try:
+        os.remove(depFile)
+    except:
+        pass
 
     for r in conf['scraper']['queries']:
         name    = r['name']
@@ -33,13 +38,13 @@ if __name__ == "__main__":
         end     = conf['scraper']['pageEnd']
         search  = conf['scraper']['searchTerm']
         delim   = conf['scraper']['delim']
-        print('Getting ' + url)
-        # spidey.crawl(url, begin, end, search, delim, txtFile)
+        # print('Getting ' + url)
+        spidey.crawl(url, begin, end, search, delim, txtFile, depFile)
         print('Cleaning ' + txtFile)
         # count, first, last = spidey.cleanResults(txtFile, rules, ignore)
         spidey.cleanResults(txtFile, rules, replace, ignore)
         # print('Captured ' + str(count) + ' results from ' + first + ' to ' + last)
-        print('done')
+        print('Done!')
 
 
     # Simple types will be manual
@@ -82,28 +87,3 @@ if __name__ == "__main__":
     syntaxFile.close
 
     exit()
-
-    # todo- move this to just beneath the config.yaml load once working 
-    try:
-        os.remove('LSL_Deprecated.txt')
-    except Exception as e:
-        print(str(e))
-
-    # Get Functions
-    page    = 'LSL_Functions&pagefrom='
-    functionsFile = page.strip('&pagefrom=') + '.txt'
-    spidey.wikiCrawl(url+page, pageBegin, pageEnd, searchTerm, delim, functionsFile)
-    spidey.cleanFunctions(functionsFile)
-
-    # Get Events
-    page = 'LSL_Events&pagefrom='
-    eventsFile = page.strip('&pagefrom=') + '.txt'
-    spidey.wikiCrawl(url+page, pageBegin, pageEnd, searchTerm, delim, eventsFile)
-    spidey.cleanEvents(eventsFile)
-
-    # Get Constants
-    page = 'LSL_Constants&pagefrom='
-    constantsFile = page.strip('&pagefrom=') + '.txt'
-    spidey.wikiCrawl(url+page, pageBegin, pageEnd, searchTerm, delim, constantsFile)
-    spidey.cleanConstants(constantsFile)
-

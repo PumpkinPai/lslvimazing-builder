@@ -9,7 +9,7 @@ import os
 # Crawl url, look for searchTerm, grab thing within delim, put it in txtFile
 def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile, badFile='bad.txt'):
     # temp- we now have decent files to play with
-    return
+    # return
 
     multi = True
     multiQuery = ''
@@ -56,12 +56,18 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile, badFile='bad.txt'
                 endFound   = html.find(delim[1], startFound + 1)
                 found      = html[startFound + 1 : endFound]
                 html       = html[endFound:]
-                # check for deprecated tag
-                deptag     = 'class=deprecated' # todo- use the actual tag
+
+                # DEPRECATIONS 
+                # Everything struck out is marvelously either dep'd, god mode,
+                # or broken so we'll make them all show as errors in code.
+                deptag     = '</s>'
                 nextFind   = html.find(searchTerm) + len(searchTerm)
+                # debug- print('Initial find: ' + str(startFind) + ' nextFind: ' + str(nextFind))
                 deprecated = html.find(deptag, 0, nextFind)
+
                 if deprecated > 0 and found:
                     deprecatedList.append(found)
+                    print('Deprecation: ' + found)
                 elif found:
                     foundList.append(found)
                 else:

@@ -197,6 +197,7 @@ llHTTPRequest
 llHTTPResponse
 llInsertString
 llInstantMessage
+\n
 llIntegerToBase64
 llJson2List
 llJsonGetValue
