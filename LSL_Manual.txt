@@ -1,0 +1,70 @@
+# LSL Syntax file for VIM
+
+
+
+# FUNCTIONS #
+syn keyword lslFunction 
+\ *FUNCTIONS*
+
+# EVENTS #
+syn keyword lslEvents
+\ *EVENTS*
+
+# CONSTANTS #
+syn keyword lslConstant
+\ *CONSTANTS*
+
+# DEPRECATED #
+syn keyword lslDeprecated
+\ *DEPRECATED*
+
+# FLOW #
+syn keyword lslFlow
+\ if
+\ else
+\ do
+\ while
+\ for
+\ jump
+\ return
+
+# TYPES #
+syn keyword lslType
+\ key
+\ string
+\ ist
+\ integer
+\ float
+\ vector
+\ rotation
+
+# DISPLAYS #
+syn match lslNumber display
+\ /[0-9]/
+
+syn region lslString display
+\ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
+
+syn region lslStringEscape display
+\ /\t\|\n/
+
+syn region lslBlock display
+\ start='{' end='}' fold transparent contains=ALL
+
+syn region lslParen display
+\ start='(' end=')' fold transparent contains=ALL
+
+syn region lslList display
+\ start='\[' end='\]' fold transparent contains=ALL
+
+syn match lslState display
+\ /\b(state).\|(default)\b/
+
+syn region lslComment display
+\ start='\/\/' end='$' contains=lslCommentTodo,@Spell
+
+syn region lslCommentMulti display
+\ start='\/\*' end='\*\/' contains=lslCommentTodo,@Spell
+
+syn match lslOperator display
+\ /[!%<>=*\+\-\/\|&\?\^~]/

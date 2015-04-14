@@ -2,6 +2,7 @@
 # plugin.  This should make building syntax files for other editors easier.
 
 pluginName: lslvimazing
+language: Linden Scripting Language (LSL)
 editor: vim
 structure:
 - name: ftdetect  
@@ -26,21 +27,22 @@ structure:
   directory: lslvimazing
 
 scraper:
-  url: http://wiki.secondlife.com/w/index.php?title=Category:
+  url: 'http://wiki.secondlife.com/w/index.php?title=Category:'
   pageBegin: 'Pages in category'
   pageEnd: 'class="printfooter"'
   searchTerm: '<li><a href="/wiki/'
   delim: ['>','<']
   ignore: ['\\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\\n']
   queries:
-  - name: LSL_Functions
-    page: LSL_Functions&pagefrom=
-    rules:
-    - rule: firstLower
-  - name: LSL_Events
-    page: LSL_Events&pagefrom=
-    rules:
-    - rule: lower
-    - rule: replace
-        find: ' '
-        replacement: _
+  - name: 'LSL_Functions'
+    page: 'LSL_Functions&pagefrom='
+    rules: ['firstLower']
+    replace: [False]
+  - name: 'LSL_Events'
+    page: 'LSL_Events&pagefrom='
+    rules: ['lower']
+    replace: [' ','_']
+  - name: 'LSL_Constants'
+    page: 'LSL_Constants&pagefrom='
+    rules: ['upper']
+    replace: [' ','_']

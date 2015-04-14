@@ -7,7 +7,7 @@ import urllib.request
 import os
 
 # Crawl url, look for searchTerm, grab thing within delim, put it in txtFile
-def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
+def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile, badFile='bad.txt'):
     # temp- we now have decent files to play with
     return
 
@@ -23,6 +23,8 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
             print('Going to: ' + url+multiQuery)
             response = urllib.request.urlopen(url+multiQuery)
             html = str(response.read())
+
+            # PAGEBEGIN TO PAGEEND
             # Make it just the nectar within pageBegin and pageEnd
             startHtml = html.find(pageBegin)
             endHtml   = html.find(pageEnd)
@@ -32,6 +34,7 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
             html = html.replace('<s>', '')
             html = html.replace('> <', '><')
 
+            # MULTI
             # If the category spans multiple pages, cry
             multi = html.find('pagefrom=')
             # we need this link for the next time around
@@ -42,27 +45,39 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
             if multi > 0: multi = True
             else: multi = False
 
+            # PROCESS HTML and save
             foundList = []
+            deprecatedList =[]
             saveFile = open(txtFile, 'a')
+            depFile  = open(badFile, 'a')
             while True:
                 startFind  = html.find(searchTerm) + len(searchTerm)
                 startFound = html.find(delim[0], startFind)
                 endFound   = html.find(delim[1], startFound + 1)
                 found      = html[startFound + 1 : endFound]
                 html       = html[endFound:]
-                if found:
+                # check for deprecated tag
+                deptag     = 'class=deprecated' # todo- use the actual tag
+                nextFind   = html.find(searchTerm) + len(searchTerm)
+                deprecated = html.find(deptag, 0, nextFind)
+                if deprecated > 0 and found:
+                    deprecatedList.append(found)
+                elif found:
                     foundList.append(found)
                 else:
                     foundTxt = '\n'.join(foundList) + '\n'
+                    depTxt = '\n'.join(deprecatedList) + '\n'
                     saveFile.write(foundTxt)
                     saveFile.close
+                    depFile.write(depTxt)
+                    depFile.close
                     break
                      
     except Exception as e:
         print(str(e))
         return False
 
-def cleanResults(dirtyFile, specialRules, ignoreList):
+def cleanResults(dirtyFile, specialRules, replace, ignoreList):
     try:
         readFile = open(dirtyFile, 'r')
     except Exception as e:
@@ -72,7 +87,21 @@ def cleanResults(dirtyFile, specialRules, ignoreList):
     for line in readFile:
         resultList.append(line.strip('\n'))
 
-    # Round 1, replicants and ignorables
+    # Round 1 for specialRules
+    cleanList = []
+    for rule in specialRules:
+        print(rule)
+        for txt in resultList:
+            if rule == 'caps':
+                txt = txt.upper()
+            elif rule  == 'lower':
+                txt = txt.lower()
+            elif rule  == 'firstLower':
+                txt = txt[0].lower() + txt[1:] 
+            cleanList.append(txt)
+
+    # Round 2, replicants and ignorables
+    resultList = cleanList
     cleanList = []
     for txt in resultList:
         dirty = False                       # Assume they took a bath
@@ -81,29 +110,22 @@ def cleanResults(dirtyFile, specialRules, ignoreList):
         if dirty == False:
             cleanList.append(txt)
 
-    # Round 2 for specialRules
-    resultList = cleanList
-    cleanList = []
-    for rule in specialRules:
+    # Round 3, replacements
+    if replace[0]:
+        resultList = cleanList
+        cleanList = []
         for txt in resultList:
-            if rule == 'caps':
-                txt = txt.upper()
-            elif rule == 'lower':
-                txt = txt.lower()
-            elif rule == 'firstLower':
-                txt = txt[0].lower() + txt[1:] 
-            elif rule == 'replace':
-                txt = txt.replace(rule['find'], rule['replacement'])
+            txt = txt.replace(replace[0], replace[1])
             cleanList.append(txt)
 
     readFile.close
     resultTxt = '\n'.join(cleanList)
-    writeFile = open(txtFile, 'w')
+    writeFile = open(dirtyFile, 'w')
     writeFile.write(resultTxt)
     writeFile.close
     
     # return number, first and last
-    return str(len(resultList)), resultList[0], resultList[1]
+    return # str(len(resultList)), resultList[0], resultList[1]
 
 
 def cleanFunctions(dirtyFile):
