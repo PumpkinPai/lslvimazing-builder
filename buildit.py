@@ -18,6 +18,7 @@ import yaml
 def getConf():
     confFile = open('config.yaml', 'r')
     conf = yaml.load(confFile)
+    return conf
 
 # Main Scrapes
 def scrapeMain():
@@ -34,10 +35,14 @@ def scrapeMain():
         search  = conf['scraper']['searchTerm']
         delim   = conf['scraper']['delim']
         # print('Getting ' + url)
-        spidey.crawl(url, begin, end, search, delim, txtFile)
+        foundCount = 0
+        pageCount = 0
+        foundCount, pageCount = spidey.crawl(url, begin, end, search, delim, txtFile)
+        print('Found: ' + str(foundCount) + ' results on ' + str(pageCount) + 'pages') # debug
         print('Cleaning ' + txtFile)
         # count, first, last = spidey.cleanResults(txtFile, rules, ignore)
-        spidey.cleanResults(txtFile, rules, replace, ignore)
+        success = spidey.cleanResults(txtFile, rules, replace, ignore)
+        print('Clean success: ' + str(success)) # debug
         # print('Captured ' + str(count) + ' results from ' + first + ' to ' + last)
         print('Done!')
 
@@ -51,9 +56,10 @@ def scrapeDeps():
     searchTerm = '<s>'
     pageBegin = 'title="LlAbs"'
     pageEnd = 'id="footnote_1"'
+    delim = ['>','<']
     url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
     spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFile)
-    spidey.cleanResults(depFile, ['firstLower'], False, ignore)
+    spidey.cleanResults(depFile, ['firstLower'], [False], [False])
     print('Done!')
 
 # Generate main syntax file
@@ -88,7 +94,7 @@ def generateSyntax():
 
 if __name__ == "__main__":
 
-    getConf()
+    conf = getConf()
 
     scrapeMain()
 
@@ -100,6 +106,7 @@ if __name__ == "__main__":
     # Create directories and cp plug-* files to proper files and locations 
     for r in conf['structure']:
         # todo
-        print(r)
+        # print(r)
+        pass
 
     generateSyntax()

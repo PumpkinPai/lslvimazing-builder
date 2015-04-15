@@ -1041,14 +1041,26 @@ syn keyword lslConstant
 
 # DEPRECATED #
 syn keyword lslDeprecated
-\ 
-\ 
-\ 
-\ 
-\ 
-\ 
-\ 
-\ 
+\ llCloud
+\ llGodLikeRezObject
+\ llMakeExplosion
+\ llMakeFire
+\ llMakeFountain
+\ llMakeSmoke
+\ llPointAt
+\ llRefreshPrimURL
+\ llReleaseCamera
+\ llRemoteDataSetRegion
+\ llRemoteLoadScript
+\ llSetInventoryPermMask
+\ llSetObjectPermMask
+\ llSetPrimURL
+\ llSound
+\ llSoundPreload
+\ llStopPointAt
+\ llTakeCamera
+\ llXorBase64Strings
+\ llXorBase64StringsCorrect
 
 # FLOW #
 syn keyword lslFlow

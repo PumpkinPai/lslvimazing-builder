@@ -18,8 +18,12 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
         os.remove(txtFile)
     except: pass
 
+    pageCount = 0
+    findCount = 0
+
     try:
         while multi:
+            pageCount += 1
             print('Going to: ' + url+multiQuery)
             response = urllib.request.urlopen(url+multiQuery)
             html = str(response.read())
@@ -52,15 +56,14 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
                 html       = html[endFound:]
 
                 if found:
+                    foundCount += 1 
                     foundList.append(found)
                 else:
                     foundTxt = '\n'.join(foundList) + '\n'
-                    depTxt = '\n'.join(deprecatedList) + '\n'
                     saveFile.write(foundTxt)
                     saveFile.close
-                    depFile.write(depTxt)
-                    depFile.close
                     break
+        return foundCount, pageCount 
                      
     except Exception as e:
         print(str(e))
@@ -79,7 +82,7 @@ def cleanResults(dirtyFile, specialRules, replace, ignoreList):
     # Round 1 for specialRules
     cleanList = []
     for rule in specialRules:
-        print(rule)
+        # print(rule) # debug
         for txt in resultList:
             if rule == 'caps':
                 txt = txt.upper()
@@ -114,9 +117,9 @@ def cleanResults(dirtyFile, specialRules, replace, ignoreList):
     writeFile.close
     
     # return number, first and last
-    return # str(len(resultList)), resultList[0], resultList[1]
+    return True # str(len(resultList)), resultList[0], resultList[1]
 
-
+''' Old stuff to delete
 def cleanFunctions(dirtyFile):
     print('Cleaning lsl functon results...')
     try:
@@ -212,7 +215,7 @@ def cleanList(dirtyList):
 
     return cleanList
 
-
+'''
 
 if __name__ == "__main__":
     print('The main file is "buildit.py" Run that instead.')
