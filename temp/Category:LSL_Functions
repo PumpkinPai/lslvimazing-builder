@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Category:LSL Functions - Second Life Wiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23.7" />
+<meta name="mat" content="PG_NOT" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Second Life Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.secondlife.com/w/api.php?action=rsd" />
+<link rel="copyright" href="/wiki/Project:Terms_of_Service" />
+<link rel="alternate" type="application/atom+xml" title="Second Life Wiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.secondlife.com/w/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.monobook.styles&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if IE 6]><link rel="stylesheet" href="http://d1yjxggot69855.cloudfront.net/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://d1yjxggot69855.cloudfront.net/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.secondlife.com/w/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: lindenlab1-mw_:resourceloader:filter:minify-css:7:08abf42de9f90a0853070fefaabfbd2e */</style>
+<script src="http://wiki.secondlife.com/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"Category","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":14,"wgPageName":"Category:LSL_Functions","wgTitle":"LSL Functions","wgCurRevisionId":1172527,"wgRevisionId":1172527,"wgArticleId":2910,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with translation/de","Needs Translation/LSL/es","Needs Translation/LSL/el","Pages with translation/fr","Needs Translation/LSL/he","Pages with translation/it","Pages with translation/ja","Pages with translation/ko","Needs Translation/LSL/nl","Pages with translation/hu","Needs Translation/LSL/no","Needs Translation/LSL/da","Needs Translation/LSL/sv","Needs Translation/LSL/tr","Pages with translation/pl","Needs Translation/LSL/pt","Pages with translation/ru","Needs Translation/LSL/uk","Pages with translation/zh-Hans","Pages with translation/zh-Hant","LSL Keywords","LSL Flow Control","LSL"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Category:LSL_Functions","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"openid-show-openid":true,"openid-userinfo-update-on-login-email":false,"openid-userinfo-update-on-login-language":false,"openid-userinfo-update-on-login-timezone":false,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":true,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false,"searchNs112":false,"searchNs113":false,"searchNs114":false,"searchNs115":false,
+"searchNs274":false,"searchNs275":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: lindenlab1-mw_:resourceloader:filter:minify-js:7:a29f53971c4cb7fe4f05eff11ef077b3 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-14 ns-subject page-Category_LSL_Functions skin-monobook action-view">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" class="mw-body-primary" role="main">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Category:LSL Functions</span></h1>
+	<div id="bodyContent" class="mw-body">
+		<div id="siteSub">From Second Life Wiki</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+
+		<!-- start content -->
+<div id="breadcrumbs2"><a href="/wiki/Main_Page" title="Main Page">Second Life Wiki</a> &gt; <a href="/wiki/LSL_Portal" title="LSL Portal">LSL Portal</a> &gt; LSL Functions</div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="hf-nsheader"></div><div class="hf-header"></div><div id="multilang">
+<p><span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/es&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/es (page does not exist)">Template:Needs Translation/LSL/es</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/el&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/el (page does not exist)">Template:Needs Translation/LSL/el</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/he&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/he (page does not exist)">Template:Needs Translation/LSL/he</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/nl&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/nl (page does not exist)">Template:Needs Translation/LSL/nl</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/no&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/no (page does not exist)">Template:Needs Translation/LSL/no</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/da&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/da (page does not exist)">Template:Needs Translation/LSL/da</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/sv&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/sv (page does not exist)">Template:Needs Translation/LSL/sv</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/tr&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/tr (page does not exist)">Template:Needs Translation/LSL/tr</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/pt&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/pt (page does not exist)">Template:Needs Translation/LSL/pt</a></span>
+<span style="display:none;"><a href="/w/index.php?title=Template:Needs_Translation/LSL/uk&amp;action=edit&amp;redlink=1" class="new" title="Template:Needs Translation/LSL/uk (page does not exist)">Template:Needs Translation/LSL/uk</a></span>
+</p>
+<div id="PageLanguage" style="display:none;"></div>
+<div id="PageCategory" style="display:none;">/LSL</div></div> <div id="LSLHeader" style="margin: 1em 0;">
+<table width="100%" style="clear: both; border: 1px solid #aaaaaa; border-collapse: collapse; padding: 0.2em; margin: 0;">
+<tr valign="top">
+<td align="center" style="padding: 0 0.5em; border-right: 1px solid #aaaaaa;"><a href="/wiki/LSL_Portal" title="LSL Portal">LSL Portal</a>
+</td>
+<td style="padding: 0 0.5em;"><span style="white-space: nowrap"><strong class="selflink">Functions</strong> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/Category:LSL_Events" title="Category:LSL Events">Events</a> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/Category:LSL_Types" title="Category:LSL Types">Types</a> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/LSL_Operators" title="LSL Operators">Operators</a> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/Category:LSL_Constants" title="Category:LSL Constants">Constants</a> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/Category:LSL_Flow_Control" title="Category:LSL Flow Control">Flow Control</a> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/LSL_Library" title="LSL Library" class="mw-redirect">Script Library</a> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/Category:LSL_Categorized_Library" title="Category:LSL Categorized Library">Categorized Library</a> &#124;</span> <span style="white-space: nowrap"><a href="/wiki/Category:LSL_Tutorials" title="Category:LSL Tutorials">Tutorials</a>         </span></td></tr></table>
+</div>
+<p>This category contains built-in LSL functions. 
+</p>
+<h2><span class="mw-headline" id="Mutability">Mutability</span></h2>
+<p>All types in LSL are immutable (they can't be mutated by side effect), variables can only be changed by being overwritten. There is no way to indirectly modify a variable's value; the only way is through direct interaction with a storing operator (=, +=, -=, *=, /=,&#160;%=, ++, --).  
+</p>
+<ul>
+<li>Built-in functions will <b>never</b> modify the variables used as parameters.
+</li>
+<li>User functions that change the values of parameters inside the function scope will not have those changes applied to the variables that supplied those parameters. <sup class="TablePager_nav" style="font-size:75%;" id="fn_1" title="Function parameters are effectively passed by value, not by reference. When pass by reference is used in LSO-LSL, the reference points to a copy of the value, not to the original."><a href="#footnote_1">[1]</a></sup>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Functions">Functions</span></h2>
+<table border="2" cellspacing="0" cellpadding="3" rules="all" style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; border-collapse:collapse; background-color:#F9F9F9; font-size:90%; empty-cells:show;">
+
+
+<tr bgcolor="#A7C1F2">
+<th> Key
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> </td>
+<td> The function was recently added.
+</td></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span> </td>
+<td> The LSO <a href="/wiki/LSL_Function_ID" title="LSL Function ID" class="mw-redirect">function ID</a> for the function is not known, or it may not have one.
+</td></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span> </td>
+<td> The function has been deprecated but still works. <br /> It is best to avoid functions marked as deprecated.
+</td></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Removed - This function has not only been deprecated, it has been removed. Do not use functions marked as removed.">&#160;R&#160;</span> </td>
+<td> The function has not only been deprecated, it has been removed. <br /> Do not use functions marked as removed.
+</td></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Not Implemented - This function has not been implemented. Do not use functions marked as not implemented.">&#160;U&#160;</span> </td>
+<td> The function has not been implemented. <br /> Do not use functions marked as not implemented.
+</td></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Broken - This function is marked as broken and may not work.">&#160;B&#160;</span> </td>
+<td> This function is marked as broken and may not work.
+</td></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="God Mode - This function requires god-mode. Functions marked as such cannot be used.">&#160;G&#160;</span> </td>
+<td> The function requires <a href="/wiki/God_mode" title="God mode" class="mw-redirect">god-mode</a>. <br /> Functions marked as such cannot be used.
+</td></tr>
+<tr>
+<td align="center"> <span style="border:1px solid; color:brown; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Requested - This function has been requested by several users and has not been implemented. Do not use functions marked as requested.">&#160;RQ&#160;</span> </td>
+<td> This function has been requested by several users and has not been implemented. <br /> Do not use functions marked as requested.
+</td></tr>
+
+
+</table>
+<ul style="column-width:20.5em; -moz-column-width:20.5em; -webkit-column-width:20.5em;">
+<li> <a href="/wiki/LlAbs" title="LlAbs">llAbs</a>
+<li> <a href="/wiki/LlAcos" title="LlAcos">llAcos</a>
+<li> <a href="/wiki/LlAddToLandBanList" title="LlAddToLandBanList">llAddToLandBanList</a>
+<li> <a href="/wiki/LlAddToLandPassList" title="LlAddToLandPassList">llAddToLandPassList</a>
+<li> <a href="/wiki/LlAdjustSoundVolume" title="LlAdjustSoundVolume">llAdjustSoundVolume</a>
+<li> <a href="/wiki/LlAgentInExperience" title="LlAgentInExperience">llAgentInExperience</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlAllowInventoryDrop" title="LlAllowInventoryDrop">llAllowInventoryDrop</a>
+<li> <a href="/wiki/LlAngleBetween" title="LlAngleBetween">llAngleBetween</a>
+<li> <a href="/wiki/LlApplyImpulse" title="LlApplyImpulse">llApplyImpulse</a>
+<li> <a href="/wiki/LlApplyRotationalImpulse" title="LlApplyRotationalImpulse">llApplyRotationalImpulse</a>
+<li> <a href="/wiki/LlAsin" title="LlAsin">llAsin</a>
+<li> <a href="/wiki/LlAtan2" title="LlAtan2">llAtan2</a>
+<li> <a href="/wiki/LlAttachToAvatar" title="LlAttachToAvatar">llAttachToAvatar</a>
+<li> <a href="/wiki/LlAttachToAvatarTemp" title="LlAttachToAvatarTemp">llAttachToAvatarTemp</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlAvatarOnLinkSitTarget" title="LlAvatarOnLinkSitTarget">llAvatarOnLinkSitTarget</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlAvatarOnSitTarget" title="LlAvatarOnSitTarget">llAvatarOnSitTarget</a>
+<li> <a href="/wiki/LlAxes2Rot" title="LlAxes2Rot">llAxes2Rot</a>
+<li> <a href="/wiki/LlAxisAngle2Rot" title="LlAxisAngle2Rot">llAxisAngle2Rot</a>
+<li> <a href="/wiki/LlBase64ToInteger" title="LlBase64ToInteger">llBase64ToInteger</a>
+<li> <a href="/wiki/LlBase64ToString" title="LlBase64ToString">llBase64ToString</a>
+<li> <a href="/wiki/LlBreakAllLinks" title="LlBreakAllLinks">llBreakAllLinks</a>
+<li> <a href="/wiki/LlBreakLink" title="LlBreakLink">llBreakLink</a>
+<li> <a href="/wiki/LlCastRay" title="LlCastRay">llCastRay</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlCeil" title="LlCeil">llCeil</a>
+<li> <a href="/wiki/LlClearCameraParams" title="LlClearCameraParams">llClearCameraParams</a>
+<li> <a href="/wiki/LlClearLinkMedia" title="LlClearLinkMedia">llClearLinkMedia</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlClearPrimMedia" title="LlClearPrimMedia">llClearPrimMedia</a>
+<li> <a href="/wiki/LlCloseRemoteDataChannel" title="LlCloseRemoteDataChannel">llCloseRemoteDataChannel</a>
+<li> <s><a href="/wiki/LlCloud" title="LlCloud">llCloud</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlCollisionFilter" title="LlCollisionFilter">llCollisionFilter</a>
+<li> <a href="/wiki/LlCollisionSound" title="LlCollisionSound">llCollisionSound</a>
+<li> <a href="/wiki/LlCollisionSprite" title="LlCollisionSprite">llCollisionSprite</a> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Broken - This function is marked as broken and may not work.">&#160;B&#160;</span>
+<li> <a href="/wiki/LlCos" title="LlCos">llCos</a>
+<li> <a href="/wiki/LlCreateCharacter" title="LlCreateCharacter">llCreateCharacter</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlCreateKeyValue" title="LlCreateKeyValue">llCreateKeyValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlCreateLink" title="LlCreateLink">llCreateLink</a>
+<li> <a href="/wiki/LlCSV2List" title="LlCSV2List">llCSV2List</a>
+<li> <a href="/wiki/LlDataSizeKeyValue" title="LlDataSizeKeyValue">llDataSizeKeyValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlDeleteCharacter" title="LlDeleteCharacter">llDeleteCharacter</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlDeleteKeyValue" title="LlDeleteKeyValue">llDeleteKeyValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlDeleteSubList" title="LlDeleteSubList">llDeleteSubList</a>
+<li> <a href="/wiki/LlDeleteSubString" title="LlDeleteSubString">llDeleteSubString</a>
+<li> <a href="/wiki/LlDetachFromAvatar" title="LlDetachFromAvatar">llDetachFromAvatar</a>
+<li> <a href="/wiki/LlDetectedGrab" title="LlDetectedGrab">llDetectedGrab</a>
+<li> <a href="/wiki/LlDetectedGroup" title="LlDetectedGroup">llDetectedGroup</a>
+<li> <a href="/wiki/LlDetectedKey" title="LlDetectedKey">llDetectedKey</a>
+<li> <a href="/wiki/LlDetectedLinkNumber" title="LlDetectedLinkNumber">llDetectedLinkNumber</a>
+<li> <a href="/wiki/LlDetectedName" title="LlDetectedName">llDetectedName</a>
+<li> <a href="/wiki/LlDetectedOwner" title="LlDetectedOwner">llDetectedOwner</a>
+<li> <a href="/wiki/LlDetectedPos" title="LlDetectedPos">llDetectedPos</a>
+<li> <a href="/wiki/LlDetectedRot" title="LlDetectedRot">llDetectedRot</a>
+<li> <a href="/wiki/LlDetectedTouchBinormal" title="LlDetectedTouchBinormal">llDetectedTouchBinormal</a>
+<li> <a href="/wiki/LlDetectedTouchFace" title="LlDetectedTouchFace">llDetectedTouchFace</a>
+<li> <a href="/wiki/LlDetectedTouchNormal" title="LlDetectedTouchNormal">llDetectedTouchNormal</a>
+<li> <a href="/wiki/LlDetectedTouchPos" title="LlDetectedTouchPos">llDetectedTouchPos</a>
+<li> <a href="/wiki/LlDetectedTouchST" title="LlDetectedTouchST">llDetectedTouchST</a>
+<li> <a href="/wiki/LlDetectedTouchUV" title="LlDetectedTouchUV">llDetectedTouchUV</a>
+<li> <a href="/wiki/LlDetectedType" title="LlDetectedType">llDetectedType</a>
+<li> <a href="/wiki/LlDetectedVel" title="LlDetectedVel">llDetectedVel</a>
+<li> <a href="/wiki/LlDialog" title="LlDialog">llDialog</a>
+<li> <a href="/wiki/LlDie" title="LlDie">llDie</a>
+<li> <a href="/wiki/LlDumpList2String" title="LlDumpList2String">llDumpList2String</a>
+<li> <a href="/wiki/LlEdgeOfWorld" title="LlEdgeOfWorld">llEdgeOfWorld</a>
+<li> <a href="/wiki/LlEjectFromLand" title="LlEjectFromLand">llEjectFromLand</a>
+<li> <a href="/wiki/LlEmail" title="LlEmail">llEmail</a>
+<li> <a href="/wiki/LlEscapeURL" title="LlEscapeURL">llEscapeURL</a>
+<li> <a href="/wiki/LlEuler2Rot" title="LlEuler2Rot">llEuler2Rot</a>
+<li> <a href="/wiki/LlEvade" title="LlEvade">llEvade</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlExecCharacterCmd" title="LlExecCharacterCmd">llExecCharacterCmd</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlFabs" title="LlFabs">llFabs</a>
+<li> <a href="/wiki/LlFleeFrom" title="LlFleeFrom">llFleeFrom</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlFloor" title="LlFloor">llFloor</a>
+<li> <a href="/wiki/LlForceMouselook" title="LlForceMouselook">llForceMouselook</a>
+<li> <a href="/wiki/LlFrand" title="LlFrand">llFrand</a>
+<li> <a href="/wiki/LlGenerateKey" title="LlGenerateKey">llGenerateKey</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetAccel" title="LlGetAccel">llGetAccel</a>
+<li> <a href="/wiki/LlGetAgentInfo" title="LlGetAgentInfo">llGetAgentInfo</a>
+<li> <a href="/wiki/LlGetAgentLanguage" title="LlGetAgentLanguage">llGetAgentLanguage</a>
+<li> <a href="/wiki/LlGetAgentList" title="LlGetAgentList">llGetAgentList</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetAgentSize" title="LlGetAgentSize">llGetAgentSize</a>
+<li> <a href="/wiki/LlGetAlpha" title="LlGetAlpha">llGetAlpha</a>
+<li> <a href="/wiki/LlGetAndResetTime" title="LlGetAndResetTime">llGetAndResetTime</a>
+<li> <a href="/wiki/LlGetAnimation" title="LlGetAnimation">llGetAnimation</a>
+<li> <a href="/wiki/LlGetAnimationList" title="LlGetAnimationList">llGetAnimationList</a>
+<li> <a href="/wiki/LlGetAnimationOverride" title="LlGetAnimationOverride">llGetAnimationOverride</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetAttached" title="LlGetAttached">llGetAttached</a>
+<li> <a href="/wiki/LlGetBoundingBox" title="LlGetBoundingBox">llGetBoundingBox</a>
+<li> <a href="/wiki/LlGetCameraPos" title="LlGetCameraPos">llGetCameraPos</a>
+<li> <a href="/wiki/LlGetCameraRot" title="LlGetCameraRot">llGetCameraRot</a>
+<li> <a href="/wiki/LlGetCenterOfMass" title="LlGetCenterOfMass">llGetCenterOfMass</a>
+<li> <a href="/wiki/LlGetClosestNavPoint" title="LlGetClosestNavPoint">llGetClosestNavPoint</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetColor" title="LlGetColor">llGetColor</a>
+<li> <a href="/wiki/LlGetCreator" title="LlGetCreator">llGetCreator</a>
+<li> <a href="/wiki/LlGetDate" title="LlGetDate">llGetDate</a>
+<li> <a href="/wiki/LlGetDisplayName" title="LlGetDisplayName">llGetDisplayName</a>
+<li> <a href="/wiki/LlGetEnergy" title="LlGetEnergy">llGetEnergy</a>
+<li> <a href="/wiki/LlGetEnv" title="LlGetEnv">llGetEnv</a>
+<li> <a href="/wiki/LlGetExperienceDetails" title="LlGetExperienceDetails">llGetExperienceDetails</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetExperienceErrorMessage" title="LlGetExperienceErrorMessage">llGetExperienceErrorMessage</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetForce" title="LlGetForce">llGetForce</a>
+<li> <a href="/wiki/LlGetFreeMemory" title="LlGetFreeMemory">llGetFreeMemory</a>
+<li> <a href="/wiki/LlGetFreeURLs" title="LlGetFreeURLs">llGetFreeURLs</a>
+<li> <a href="/wiki/LlGetGeometricCenter" title="LlGetGeometricCenter">llGetGeometricCenter</a>
+<li> <a href="/wiki/LlGetGMTclock" title="LlGetGMTclock">llGetGMTclock</a>
+<li> <a href="/wiki/LlGetHTTPHeader" title="LlGetHTTPHeader">llGetHTTPHeader</a>
+<li> <a href="/wiki/LlGetInventoryCreator" title="LlGetInventoryCreator">llGetInventoryCreator</a>
+<li> <a href="/wiki/LlGetInventoryKey" title="LlGetInventoryKey">llGetInventoryKey</a>
+<li> <a href="/wiki/LlGetInventoryName" title="LlGetInventoryName">llGetInventoryName</a>
+<li> <a href="/wiki/LlGetInventoryNumber" title="LlGetInventoryNumber">llGetInventoryNumber</a>
+<li> <a href="/wiki/LlGetInventoryPermMask" title="LlGetInventoryPermMask">llGetInventoryPermMask</a>
+<li> <a href="/wiki/LlGetInventoryType" title="LlGetInventoryType">llGetInventoryType</a>
+<li> <a href="/wiki/LlGetKey" title="LlGetKey">llGetKey</a>
+<li> <a href="/wiki/LlGetLandOwnerAt" title="LlGetLandOwnerAt">llGetLandOwnerAt</a>
+<li> <a href="/wiki/LlGetLinkKey" title="LlGetLinkKey">llGetLinkKey</a>
+<li> <a href="/wiki/LlGetLinkMedia" title="LlGetLinkMedia">llGetLinkMedia</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetLinkName" title="LlGetLinkName">llGetLinkName</a>
+<li> <a href="/wiki/LlGetLinkNumber" title="LlGetLinkNumber">llGetLinkNumber</a>
+<li> <a href="/wiki/LlGetLinkNumberOfSides" title="LlGetLinkNumberOfSides">llGetLinkNumberOfSides</a>
+<li> <a href="/wiki/LlGetLinkPrimitiveParams" title="LlGetLinkPrimitiveParams" class="mw-redirect">llGetLinkPrimitiveParams</a>
+<li> <a href="/wiki/LlGetListEntryType" title="LlGetListEntryType">llGetListEntryType</a>
+<li> <a href="/wiki/LlGetListLength" title="LlGetListLength">llGetListLength</a>
+<li> <a href="/wiki/LlGetLocalPos" title="LlGetLocalPos">llGetLocalPos</a>
+<li> <a href="/wiki/LlGetLocalRot" title="LlGetLocalRot">llGetLocalRot</a>
+<li> <a href="/wiki/LlGetMass" title="LlGetMass">llGetMass</a>
+<li> <a href="/wiki/LlGetMassMKS" title="LlGetMassMKS">llGetMassMKS</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetMaxScaleFactor" title="LlGetMaxScaleFactor">llGetMaxScaleFactor</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetMemoryLimit" title="LlGetMemoryLimit">llGetMemoryLimit</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetMinScaleFactor" title="LlGetMinScaleFactor">llGetMinScaleFactor</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetNextEmail" title="LlGetNextEmail">llGetNextEmail</a>
+<li> <a href="/wiki/LlGetNotecardLine" title="LlGetNotecardLine">llGetNotecardLine</a>
+<li> <a href="/wiki/LlGetNumberOfNotecardLines" title="LlGetNumberOfNotecardLines">llGetNumberOfNotecardLines</a>
+<li> <a href="/wiki/LlGetNumberOfPrims" title="LlGetNumberOfPrims">llGetNumberOfPrims</a>
+<li> <a href="/wiki/LlGetNumberOfSides" title="LlGetNumberOfSides">llGetNumberOfSides</a>
+<li> <a href="/wiki/LlGetObjectDesc" title="LlGetObjectDesc">llGetObjectDesc</a>
+<li> <a href="/wiki/LlGetObjectDetails" title="LlGetObjectDetails">llGetObjectDetails</a>
+<li> <a href="/wiki/LlGetObjectMass" title="LlGetObjectMass">llGetObjectMass</a>
+<li> <a href="/wiki/LlGetObjectName" title="LlGetObjectName">llGetObjectName</a>
+<li> <a href="/wiki/LlGetObjectPermMask" title="LlGetObjectPermMask">llGetObjectPermMask</a>
+<li> <a href="/wiki/LlGetObjectPrimCount" title="LlGetObjectPrimCount">llGetObjectPrimCount</a>
+<li> <a href="/wiki/LlGetOmega" title="LlGetOmega">llGetOmega</a>
+<li> <a href="/wiki/LlGetOwner" title="LlGetOwner">llGetOwner</a>
+<li> <a href="/wiki/LlGetOwnerKey" title="LlGetOwnerKey">llGetOwnerKey</a>
+<li> <a href="/wiki/LlGetParcelDetails" title="LlGetParcelDetails">llGetParcelDetails</a>
+<li> <a href="/wiki/LlGetParcelFlags" title="LlGetParcelFlags">llGetParcelFlags</a>
+<li> <a href="/wiki/LlGetParcelMaxPrims" title="LlGetParcelMaxPrims">llGetParcelMaxPrims</a>
+<li> <a href="/wiki/LlGetParcelMusicURL" title="LlGetParcelMusicURL">llGetParcelMusicURL</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetParcelPrimCount" title="LlGetParcelPrimCount">llGetParcelPrimCount</a>
+<li> <a href="/wiki/LlGetParcelPrimOwners" title="LlGetParcelPrimOwners">llGetParcelPrimOwners</a>
+<li> <a href="/wiki/LlGetPermissions" title="LlGetPermissions">llGetPermissions</a>
+<li> <a href="/wiki/LlGetPermissionsKey" title="LlGetPermissionsKey">llGetPermissionsKey</a>
+<li> <a href="/wiki/LlGetPhysicsMaterial" title="LlGetPhysicsMaterial">llGetPhysicsMaterial</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetPos" title="LlGetPos">llGetPos</a>
+<li> <a href="/wiki/LlGetPrimitiveParams" title="LlGetPrimitiveParams">llGetPrimitiveParams</a>
+<li> <a href="/wiki/LlGetPrimMediaParams" title="LlGetPrimMediaParams">llGetPrimMediaParams</a>
+<li> <a href="/wiki/LlGetRegionAgentCount" title="LlGetRegionAgentCount">llGetRegionAgentCount</a>
+<li> <a href="/wiki/LlGetRegionCorner" title="LlGetRegionCorner">llGetRegionCorner</a>
+<li> <a href="/wiki/LlGetRegionFlags" title="LlGetRegionFlags">llGetRegionFlags</a>
+<li> <a href="/wiki/LlGetRegionFPS" title="LlGetRegionFPS">llGetRegionFPS</a>
+<li> <a href="/wiki/LlGetRegionName" title="LlGetRegionName">llGetRegionName</a>
+<li> <a href="/wiki/LlGetRegionTimeDilation" title="LlGetRegionTimeDilation">llGetRegionTimeDilation</a>
+<li> <a href="/wiki/LlGetRootPosition" title="LlGetRootPosition">llGetRootPosition</a>
+<li> <a href="/wiki/LlGetRootRotation" title="LlGetRootRotation">llGetRootRotation</a>
+<li> <a href="/wiki/LlGetRot" title="LlGetRot">llGetRot</a>
+<li> <a href="/wiki/LlGetScale" title="LlGetScale">llGetScale</a>
+<li> <a href="/wiki/LlGetScriptName" title="LlGetScriptName">llGetScriptName</a>
+<li> <a href="/wiki/LlGetScriptState" title="LlGetScriptState">llGetScriptState</a>
+<li> <a href="/wiki/LlGetSimStats" title="LlGetSimStats">llGetSimStats</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetSimulatorHostname" title="LlGetSimulatorHostname">llGetSimulatorHostname</a>
+<li> <a href="/wiki/LlGetSPMaxMemory" title="LlGetSPMaxMemory">llGetSPMaxMemory</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetStartParameter" title="LlGetStartParameter">llGetStartParameter</a>
+<li> <a href="/wiki/LlGetStaticPath" title="LlGetStaticPath">llGetStaticPath</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetStatus" title="LlGetStatus">llGetStatus</a>
+<li> <a href="/wiki/LlGetSubString" title="LlGetSubString">llGetSubString</a>
+<li> <a href="/wiki/LlGetSunDirection" title="LlGetSunDirection">llGetSunDirection</a>
+<li> <a href="/wiki/LlGetTexture" title="LlGetTexture">llGetTexture</a>
+<li> <a href="/wiki/LlGetTextureOffset" title="LlGetTextureOffset">llGetTextureOffset</a>
+<li> <a href="/wiki/LlGetTextureRot" title="LlGetTextureRot">llGetTextureRot</a>
+<li> <a href="/wiki/LlGetTextureScale" title="LlGetTextureScale">llGetTextureScale</a>
+<li> <a href="/wiki/LlGetTime" title="LlGetTime">llGetTime</a>
+<li> <a href="/wiki/LlGetTimeOfDay" title="LlGetTimeOfDay">llGetTimeOfDay</a>
+<li> <a href="/wiki/LlGetTimestamp" title="LlGetTimestamp">llGetTimestamp</a>
+<li> <a href="/wiki/LlGetTorque" title="LlGetTorque">llGetTorque</a>
+<li> <a href="/wiki/LlGetUnixTime" title="LlGetUnixTime">llGetUnixTime</a>
+<li> <a href="/wiki/LlGetUsedMemory" title="LlGetUsedMemory">llGetUsedMemory</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlGetUsername" title="LlGetUsername">llGetUsername</a>
+<li> <a href="/wiki/LlGetVel" title="LlGetVel">llGetVel</a>
+<li> <a href="/wiki/LlGetWallclock" title="LlGetWallclock">llGetWallclock</a>
+<li> <a href="/wiki/LlGiveInventory" title="LlGiveInventory">llGiveInventory</a>
+<li> <a href="/wiki/LlGiveInventoryList" title="LlGiveInventoryList">llGiveInventoryList</a>
+<li> <a href="/wiki/LlGiveMoney" title="LlGiveMoney">llGiveMoney</a>
+<li> <s><a href="/wiki/LlGodLikeRezObject" title="LlGodLikeRezObject">llGodLikeRezObject</a></s> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="God Mode - This function requires god-mode. Functions marked as such cannot be used.">&#160;G&#160;</span>
+<li> <a href="/wiki/LlGround" title="LlGround">llGround</a>
+<li> <a href="/wiki/LlGroundContour" title="LlGroundContour">llGroundContour</a>
+<li> <a href="/wiki/LlGroundNormal" title="LlGroundNormal">llGroundNormal</a>
+<li> <a href="/wiki/LlGroundRepel" title="LlGroundRepel">llGroundRepel</a>
+<li> <a href="/wiki/LlGroundSlope" title="LlGroundSlope">llGroundSlope</a>
+<li> <a href="/wiki/LlHTTPRequest" title="LlHTTPRequest">llHTTPRequest</a>
+<li> <a href="/wiki/LlHTTPResponse" title="LlHTTPResponse">llHTTPResponse</a>
+<li> <a href="/wiki/LlInsertString" title="LlInsertString">llInsertString</a>
+<li> <a href="/wiki/LlInstantMessage" title="LlInstantMessage">llInstantMessage</a>
+<li> <a href="/wiki/LlIntegerToBase64" title="LlIntegerToBase64">llIntegerToBase64</a>
+<li> <a href="/wiki/LlJson2List" title="LlJson2List">llJson2List</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlJsonGetValue" title="LlJsonGetValue">llJsonGetValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlJsonSetValue" title="LlJsonSetValue">llJsonSetValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlJsonValueType" title="LlJsonValueType">llJsonValueType</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlKey2Name" title="LlKey2Name">llKey2Name</a>
+<li> <a href="/wiki/LlKeyCountKeyValue" title="LlKeyCountKeyValue">llKeyCountKeyValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlKeysKeyValue" title="LlKeysKeyValue">llKeysKeyValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlLinkParticleSystem" title="LlLinkParticleSystem" class="mw-redirect">llLinkParticleSystem</a>
+<li> <a href="/wiki/LlLinkSitTarget" title="LlLinkSitTarget">llLinkSitTarget</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlList2CSV" title="LlList2CSV">llList2CSV</a>
+<li> <a href="/wiki/LlList2Float" title="LlList2Float">llList2Float</a>
+<li> <a href="/wiki/LlList2Integer" title="LlList2Integer">llList2Integer</a>
+<li> <a href="/wiki/LlList2Json" title="LlList2Json">llList2Json</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlList2Key" title="LlList2Key">llList2Key</a>
+<li> <a href="/wiki/LlList2List" title="LlList2List">llList2List</a>
+<li> <a href="/wiki/LlList2ListStrided" title="LlList2ListStrided">llList2ListStrided</a>
+<li> <a href="/wiki/LlList2Rot" title="LlList2Rot">llList2Rot</a>
+<li> <a href="/wiki/LlList2String" title="LlList2String">llList2String</a>
+<li> <a href="/wiki/LlList2Vector" title="LlList2Vector">llList2Vector</a>
+<li> <a href="/wiki/LlListen" title="LlListen">llListen</a>
+<li> <a href="/wiki/LlListenControl" title="LlListenControl">llListenControl</a>
+<li> <a href="/wiki/LlListenRemove" title="LlListenRemove">llListenRemove</a>
+<li> <a href="/wiki/LlListFindList" title="LlListFindList">llListFindList</a>
+<li> <a href="/wiki/LlListInsertList" title="LlListInsertList">llListInsertList</a>
+<li> <a href="/wiki/LlListRandomize" title="LlListRandomize">llListRandomize</a>
+<li> <a href="/wiki/LlListReplaceList" title="LlListReplaceList">llListReplaceList</a>
+<li> <a href="/wiki/LlListSort" title="LlListSort">llListSort</a>
+<li> <a href="/wiki/LlListStatistics" title="LlListStatistics">llListStatistics</a>
+<li> <a href="/wiki/LlLoadURL" title="LlLoadURL">llLoadURL</a>
+<li> <a href="/wiki/LlLog" title="LlLog">llLog</a>
+<li> <a href="/wiki/LlLog10" title="LlLog10">llLog10</a>
+<li> <a href="/wiki/LlLookAt" title="LlLookAt">llLookAt</a>
+<li> <a href="/wiki/LlLoopSound" title="LlLoopSound">llLoopSound</a>
+<li> <a href="/wiki/LlLoopSoundMaster" title="LlLoopSoundMaster">llLoopSoundMaster</a>
+<li> <a href="/wiki/LlLoopSoundSlave" title="LlLoopSoundSlave">llLoopSoundSlave</a>
+<li> <s><a href="/wiki/LlMakeExplosion" title="LlMakeExplosion">llMakeExplosion</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <s><a href="/wiki/LlMakeFire" title="LlMakeFire">llMakeFire</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <s><a href="/wiki/LlMakeFountain" title="LlMakeFountain">llMakeFountain</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <s><a href="/wiki/LlMakeSmoke" title="LlMakeSmoke">llMakeSmoke</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlManageEstateAccess" title="LlManageEstateAccess">llManageEstateAccess</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlMapDestination" title="LlMapDestination">llMapDestination</a>
+<li> <a href="/wiki/LlMD5String" title="LlMD5String">llMD5String</a>
+<li> <a href="/wiki/LlMessageLinked" title="LlMessageLinked">llMessageLinked</a>
+<li> <a href="/wiki/LlMinEventDelay" title="LlMinEventDelay">llMinEventDelay</a>
+<li> <a href="/wiki/LlModifyLand" title="LlModifyLand">llModifyLand</a>
+<li> <a href="/wiki/LlModPow" title="LlModPow">llModPow</a>
+<li> <a href="/wiki/LlMoveToTarget" title="LlMoveToTarget">llMoveToTarget</a>
+<li> <a href="/wiki/LlNavigateTo" title="LlNavigateTo">llNavigateTo</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlOffsetTexture" title="LlOffsetTexture">llOffsetTexture</a>
+<li> <a href="/wiki/LlOpenRemoteDataChannel" title="LlOpenRemoteDataChannel">llOpenRemoteDataChannel</a>
+<li> <a href="/wiki/LlOverMyLand" title="LlOverMyLand">llOverMyLand</a>
+<li> <a href="/wiki/LlOwnerSay" title="LlOwnerSay">llOwnerSay</a>
+<li> <a href="/wiki/LlParcelMediaCommandList" title="LlParcelMediaCommandList">llParcelMediaCommandList</a>
+<li> <a href="/wiki/LlParcelMediaQuery" title="LlParcelMediaQuery">llParcelMediaQuery</a>
+<li> <a href="/wiki/LlParseString2List" title="LlParseString2List">llParseString2List</a>
+<li> <a href="/wiki/LlParseStringKeepNulls" title="LlParseStringKeepNulls">llParseStringKeepNulls</a>
+<li> <a href="/wiki/LlParticleSystem" title="LlParticleSystem">llParticleSystem</a>
+<li> <a href="/wiki/LlPassCollisions" title="LlPassCollisions">llPassCollisions</a>
+<li> <a href="/wiki/LlPassTouches" title="LlPassTouches">llPassTouches</a>
+<li> <a href="/wiki/LlPatrolPoints" title="LlPatrolPoints">llPatrolPoints</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlPlaySound" title="LlPlaySound">llPlaySound</a>
+<li> <a href="/wiki/LlPlaySoundSlave" title="LlPlaySoundSlave">llPlaySoundSlave</a>
+<li> <s><a href="/wiki/LlPointAt" title="LlPointAt">llPointAt</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlPow" title="LlPow">llPow</a>
+<li> <a href="/wiki/LlPreloadSound" title="LlPreloadSound">llPreloadSound</a>
+<li> <a href="/wiki/LlPursue" title="LlPursue">llPursue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlPushObject" title="LlPushObject">llPushObject</a>
+<li> <a href="/wiki/LlReadKeyValue" title="LlReadKeyValue">llReadKeyValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <s><a href="/wiki/LlRefreshPrimURL" title="LlRefreshPrimURL">llRefreshPrimURL</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlRegionSay" title="LlRegionSay">llRegionSay</a>
+<li> <a href="/wiki/LlRegionSayTo" title="LlRegionSayTo">llRegionSayTo</a>
+<li> <s><a href="/wiki/LlReleaseCamera" title="LlReleaseCamera">llReleaseCamera</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlReleaseControls" title="LlReleaseControls">llReleaseControls</a>
+<li> <a href="/wiki/LlReleaseURL" title="LlReleaseURL">llReleaseURL</a>
+<li> <a href="/wiki/LlRemoteDataReply" title="LlRemoteDataReply">llRemoteDataReply</a>
+<li> <s><a href="/wiki/LlRemoteDataSetRegion" title="LlRemoteDataSetRegion">llRemoteDataSetRegion</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <s><a href="/wiki/LlRemoteLoadScript" title="LlRemoteLoadScript">llRemoteLoadScript</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlRemoteLoadScriptPin" title="LlRemoteLoadScriptPin">llRemoteLoadScriptPin</a>
+<li> <a href="/wiki/LlRemoveFromLandBanList" title="LlRemoveFromLandBanList">llRemoveFromLandBanList</a>
+<li> <a href="/wiki/LlRemoveFromLandPassList" title="LlRemoveFromLandPassList">llRemoveFromLandPassList</a>
+<li> <a href="/wiki/LlRemoveInventory" title="LlRemoveInventory">llRemoveInventory</a>
+<li> <a href="/wiki/LlRemoveVehicleFlags" title="LlRemoveVehicleFlags">llRemoveVehicleFlags</a>
+<li> <a href="/wiki/LlRequestAgentData" title="LlRequestAgentData">llRequestAgentData</a>
+<li> <a href="/wiki/LlRequestDisplayName" title="LlRequestDisplayName">llRequestDisplayName</a>
+<li> <a href="/wiki/LlRequestExperiencePermissions" title="LlRequestExperiencePermissions">llRequestExperiencePermissions</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlRequestInventoryData" title="LlRequestInventoryData">llRequestInventoryData</a>
+<li> <a href="/wiki/LlRequestPermissions" title="LlRequestPermissions">llRequestPermissions</a>
+<li> <a href="/wiki/LlRequestSecureURL" title="LlRequestSecureURL">llRequestSecureURL</a>
+<li> <a href="/wiki/LlRequestSimulatorData" title="LlRequestSimulatorData">llRequestSimulatorData</a>
+<li> <a href="/wiki/LlRequestURL" title="LlRequestURL">llRequestURL</a>
+<li> <a href="/wiki/LlRequestUsername" title="LlRequestUsername">llRequestUsername</a>
+<li> <a href="/wiki/LlResetAnimationOverride" title="LlResetAnimationOverride">llResetAnimationOverride</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlResetLandBanList" title="LlResetLandBanList">llResetLandBanList</a>
+<li> <a href="/wiki/LlResetLandPassList" title="LlResetLandPassList">llResetLandPassList</a>
+<li> <a href="/wiki/LlResetOtherScript" title="LlResetOtherScript">llResetOtherScript</a>
+<li> <a href="/wiki/LlResetScript" title="LlResetScript">llResetScript</a>
+<li> <a href="/wiki/LlResetTime" title="LlResetTime">llResetTime</a>
+<li> <a href="/wiki/LlReturnObjectsByID" title="LlReturnObjectsByID">llReturnObjectsByID</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlReturnObjectsByOwner" title="LlReturnObjectsByOwner">llReturnObjectsByOwner</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlRezAtRoot" title="LlRezAtRoot">llRezAtRoot</a>
+<li> <a href="/wiki/LlRezObject" title="LlRezObject">llRezObject</a>
+<li> <a href="/wiki/LlRot2Angle" title="LlRot2Angle">llRot2Angle</a>
+<li> <a href="/wiki/LlRot2Axis" title="LlRot2Axis">llRot2Axis</a>
+<li> <a href="/wiki/LlRot2Euler" title="LlRot2Euler">llRot2Euler</a>
+<li> <a href="/wiki/LlRot2Fwd" title="LlRot2Fwd">llRot2Fwd</a>
+<li> <a href="/wiki/LlRot2Left" title="LlRot2Left">llRot2Left</a>
+<li> <a href="/wiki/LlRot2Up" title="LlRot2Up">llRot2Up</a>
+<li> <a href="/wiki/LlRotateTexture" title="LlRotateTexture">llRotateTexture</a>
+<li> <a href="/wiki/LlRotBetween" title="LlRotBetween">llRotBetween</a>
+<li> <a href="/wiki/LlRotLookAt" title="LlRotLookAt">llRotLookAt</a>
+<li> <a href="/wiki/LlRotTarget" title="LlRotTarget">llRotTarget</a>
+<li> <a href="/wiki/LlRotTargetRemove" title="LlRotTargetRemove">llRotTargetRemove</a>
+<li> <a href="/wiki/LlRound" title="LlRound">llRound</a>
+<li> <a href="/wiki/LlSameGroup" title="LlSameGroup">llSameGroup</a>
+<li> <a href="/wiki/LlSay" title="LlSay">llSay</a>
+<li> <a href="/wiki/LlScaleByFactor" title="LlScaleByFactor">llScaleByFactor</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlScaleTexture" title="LlScaleTexture">llScaleTexture</a>
+<li> <a href="/wiki/LlScriptDanger" title="LlScriptDanger">llScriptDanger</a>
+<li> <a href="/wiki/LlScriptProfiler" title="LlScriptProfiler">llScriptProfiler</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSendRemoteData" title="LlSendRemoteData">llSendRemoteData</a>
+<li> <a href="/wiki/LlSensor" title="LlSensor">llSensor</a>
+<li> <a href="/wiki/LlSensorRemove" title="LlSensorRemove">llSensorRemove</a>
+<li> <a href="/wiki/LlSensorRepeat" title="LlSensorRepeat">llSensorRepeat</a>
+<li> <a href="/wiki/LlSetAlpha" title="LlSetAlpha">llSetAlpha</a>
+<li> <a href="/wiki/LlSetAngularVelocity" title="LlSetAngularVelocity">llSetAngularVelocity</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetAnimationOverride" title="LlSetAnimationOverride">llSetAnimationOverride</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetBuoyancy" title="LlSetBuoyancy">llSetBuoyancy</a>
+<li> <a href="/wiki/LlSetCameraAtOffset" title="LlSetCameraAtOffset">llSetCameraAtOffset</a>
+<li> <a href="/wiki/LlSetCameraEyeOffset" title="LlSetCameraEyeOffset">llSetCameraEyeOffset</a>
+<li> <a href="/wiki/LlSetCameraParams" title="LlSetCameraParams">llSetCameraParams</a>
+<li> <a href="/wiki/LlSetClickAction" title="LlSetClickAction">llSetClickAction</a>
+<li> <a href="/wiki/LlSetColor" title="LlSetColor">llSetColor</a>
+<li> <a href="/wiki/LlSetContentType" title="LlSetContentType">llSetContentType</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetDamage" title="LlSetDamage">llSetDamage</a>
+<li> <a href="/wiki/LlSetForce" title="LlSetForce">llSetForce</a>
+<li> <a href="/wiki/LlSetForceAndTorque" title="LlSetForceAndTorque">llSetForceAndTorque</a>
+<li> <a href="/wiki/LlSetHoverHeight" title="LlSetHoverHeight">llSetHoverHeight</a>
+<li> <s><a href="/wiki/LlSetInventoryPermMask" title="LlSetInventoryPermMask">llSetInventoryPermMask</a></s> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="God Mode - This function requires god-mode. Functions marked as such cannot be used.">&#160;G&#160;</span>
+<li> <a href="/wiki/LlSetKeyframedMotion" title="LlSetKeyframedMotion">llSetKeyframedMotion</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetLinkAlpha" title="LlSetLinkAlpha">llSetLinkAlpha</a>
+<li> <a href="/wiki/LlSetLinkCamera" title="LlSetLinkCamera">llSetLinkCamera</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetLinkColor" title="LlSetLinkColor">llSetLinkColor</a>
+<li> <a href="/wiki/LlSetLinkMedia" title="LlSetLinkMedia">llSetLinkMedia</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetLinkPrimitiveParams" title="LlSetLinkPrimitiveParams" class="mw-redirect">llSetLinkPrimitiveParams</a>
+<li> <a href="/wiki/LlSetLinkPrimitiveParamsFast" title="LlSetLinkPrimitiveParamsFast" class="mw-redirect">llSetLinkPrimitiveParamsFast</a>
+<li> <a href="/wiki/LlSetLinkTexture" title="LlSetLinkTexture">llSetLinkTexture</a>
+<li> <a href="/wiki/LlSetLinkTextureAnim" title="LlSetLinkTextureAnim">llSetLinkTextureAnim</a>
+<li> <a href="/wiki/LlSetLocalRot" title="LlSetLocalRot">llSetLocalRot</a>
+<li> <a href="/wiki/LlSetMemoryLimit" title="LlSetMemoryLimit">llSetMemoryLimit</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetObjectDesc" title="LlSetObjectDesc">llSetObjectDesc</a>
+<li> <a href="/wiki/LlSetObjectName" title="LlSetObjectName">llSetObjectName</a>
+<li> <s><a href="/wiki/LlSetObjectPermMask" title="LlSetObjectPermMask">llSetObjectPermMask</a></s> <span style="border:1px solid; color:red; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="God Mode - This function requires god-mode. Functions marked as such cannot be used.">&#160;G&#160;</span>
+<li> <a href="/wiki/LlSetParcelMusicURL" title="LlSetParcelMusicURL">llSetParcelMusicURL</a>
+<li> <a href="/wiki/LlSetPayPrice" title="LlSetPayPrice">llSetPayPrice</a>
+<li> <a href="/wiki/LlSetPhysicsMaterial" title="LlSetPhysicsMaterial">llSetPhysicsMaterial</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetPos" title="LlSetPos">llSetPos</a>
+<li> <a href="/wiki/LlSetPrimitiveParams" title="LlSetPrimitiveParams">llSetPrimitiveParams</a>
+<li> <a href="/wiki/LlSetPrimMediaParams" title="LlSetPrimMediaParams">llSetPrimMediaParams</a>
+<li> <s><a href="/wiki/LlSetPrimURL" title="LlSetPrimURL">llSetPrimURL</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlSetRegionPos" title="LlSetRegionPos">llSetRegionPos</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSetRemoteScriptAccessPin" title="LlSetRemoteScriptAccessPin">llSetRemoteScriptAccessPin</a>
+<li> <a href="/wiki/LlSetRot" title="LlSetRot">llSetRot</a>
+<li> <a href="/wiki/LlSetScale" title="LlSetScale">llSetScale</a>
+<li> <a href="/wiki/LlSetScriptState" title="LlSetScriptState">llSetScriptState</a>
+<li> <a href="/wiki/LlSetSitText" title="LlSetSitText">llSetSitText</a>
+<li> <a href="/wiki/LlSetSoundQueueing" title="LlSetSoundQueueing">llSetSoundQueueing</a>
+<li> <a href="/wiki/LlSetSoundRadius" title="LlSetSoundRadius">llSetSoundRadius</a>
+<li> <a href="/wiki/LlSetStatus" title="LlSetStatus">llSetStatus</a>
+<li> <a href="/wiki/LlSetText" title="LlSetText">llSetText</a>
+<li> <a href="/wiki/LlSetTexture" title="LlSetTexture">llSetTexture</a>
+<li> <a href="/wiki/LlSetTextureAnim" title="LlSetTextureAnim">llSetTextureAnim</a>
+<li> <a href="/wiki/LlSetTimerEvent" title="LlSetTimerEvent">llSetTimerEvent</a>
+<li> <a href="/wiki/LlSetTorque" title="LlSetTorque">llSetTorque</a>
+<li> <a href="/wiki/LlSetTouchText" title="LlSetTouchText">llSetTouchText</a>
+<li> <a href="/wiki/LlSetVehicleFlags" title="LlSetVehicleFlags">llSetVehicleFlags</a>
+<li> <a href="/wiki/LlSetVehicleFloatParam" title="LlSetVehicleFloatParam">llSetVehicleFloatParam</a>
+<li> <a href="/wiki/LlSetVehicleRotationParam" title="LlSetVehicleRotationParam">llSetVehicleRotationParam</a>
+<li> <a href="/wiki/LlSetVehicleType" title="LlSetVehicleType">llSetVehicleType</a>
+<li> <a href="/wiki/LlSetVehicleVectorParam" title="LlSetVehicleVectorParam">llSetVehicleVectorParam</a>
+<li> <a href="/wiki/LlSetVelocity" title="LlSetVelocity">llSetVelocity</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlSHA1String" title="LlSHA1String">llSHA1String</a>
+<li> <a href="/wiki/LlShout" title="LlShout">llShout</a>
+<li> <a href="/wiki/LlSin" title="LlSin">llSin</a>
+<li> <a href="/wiki/LlSitTarget" title="LlSitTarget">llSitTarget</a>
+<li> <a href="/wiki/LlSleep" title="LlSleep">llSleep</a>
+<li> <s><a href="/wiki/LlSound" title="LlSound">llSound</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <s><a href="/wiki/LlSoundPreload" title="LlSoundPreload">llSoundPreload</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlSqrt" title="LlSqrt">llSqrt</a>
+<li> <a href="/wiki/LlStartAnimation" title="LlStartAnimation">llStartAnimation</a>
+<li> <a href="/wiki/LlStopAnimation" title="LlStopAnimation">llStopAnimation</a>
+<li> <a href="/wiki/LlStopHover" title="LlStopHover">llStopHover</a>
+<li> <a href="/wiki/LlStopLookAt" title="LlStopLookAt">llStopLookAt</a>
+<li> <a href="/wiki/LlStopMoveToTarget" title="LlStopMoveToTarget">llStopMoveToTarget</a>
+<li> <s><a href="/wiki/LlStopPointAt" title="LlStopPointAt">llStopPointAt</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlStopSound" title="LlStopSound">llStopSound</a>
+<li> <a href="/wiki/LlStringLength" title="LlStringLength">llStringLength</a>
+<li> <a href="/wiki/LlStringToBase64" title="LlStringToBase64">llStringToBase64</a>
+<li> <a href="/wiki/LlStringTrim" title="LlStringTrim">llStringTrim</a>
+<li> <a href="/wiki/LlSubStringIndex" title="LlSubStringIndex">llSubStringIndex</a>
+<li> <s><a href="/wiki/LlTakeCamera" title="LlTakeCamera">llTakeCamera</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <a href="/wiki/LlTakeControls" title="LlTakeControls">llTakeControls</a>
+<li> <a href="/wiki/LlTan" title="LlTan">llTan</a>
+<li> <a href="/wiki/LlTarget" title="LlTarget">llTarget</a>
+<li> <a href="/wiki/LlTargetOmega" title="LlTargetOmega">llTargetOmega</a>
+<li> <a href="/wiki/LlTargetRemove" title="LlTargetRemove">llTargetRemove</a>
+<li> <a href="/wiki/LlTeleportAgent" title="LlTeleportAgent">llTeleportAgent</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlTeleportAgentGlobalCoords" title="LlTeleportAgentGlobalCoords">llTeleportAgentGlobalCoords</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlTeleportAgentHome" title="LlTeleportAgentHome">llTeleportAgentHome</a>
+<li> <a href="/wiki/LlTextBox" title="LlTextBox">llTextBox</a>
+<li> <a href="/wiki/LlToLower" title="LlToLower">llToLower</a>
+<li> <a href="/wiki/LlToUpper" title="LlToUpper">llToUpper</a>
+<li> <a href="/wiki/LlTransferLindenDollars" title="LlTransferLindenDollars">llTransferLindenDollars</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlTriggerSound" title="LlTriggerSound">llTriggerSound</a>
+<li> <a href="/wiki/LlTriggerSoundLimited" title="LlTriggerSoundLimited">llTriggerSoundLimited</a>
+<li> <a href="/wiki/LlUnescapeURL" title="LlUnescapeURL">llUnescapeURL</a>
+<li> <a href="/wiki/LlUnSit" title="LlUnSit">llUnSit</a>
+<li> <a href="/wiki/LlUpdateCharacter" title="LlUpdateCharacter">llUpdateCharacter</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlUpdateKeyValue" title="LlUpdateKeyValue">llUpdateKeyValue</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlVecDist" title="LlVecDist">llVecDist</a>
+<li> <a href="/wiki/LlVecMag" title="LlVecMag">llVecMag</a>
+<li> <a href="/wiki/LlVecNorm" title="LlVecNorm">llVecNorm</a>
+<li> <a href="/wiki/LlVolumeDetect" title="LlVolumeDetect">llVolumeDetect</a>
+<li> <a href="/wiki/LlWanderWithin" title="LlWanderWithin">llWanderWithin</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <a href="/wiki/LlWater" title="LlWater">llWater</a>
+<li> <a href="/wiki/LlWhisper" title="LlWhisper">llWhisper</a>
+<li> <a href="/wiki/LlWind" title="LlWind">llWind</a>
+<li> <a href="/wiki/LlXorBase64" title="LlXorBase64">llXorBase64</a> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="New - This function was recently added.">&#160;NEW&#160;</span> <span style="border:1px solid; color:green; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="LSO ID Unknown - The LSO function ID for the function is not known, or it may not have one.">&#160;I&#160;</span>
+<li> <s><a href="/wiki/LlXorBase64Strings" title="LlXorBase64Strings">llXorBase64Strings</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+<li> <s><a href="/wiki/LlXorBase64StringsCorrect" title="LlXorBase64StringsCorrect">llXorBase64StringsCorrect</a></s> <span style="border:1px solid; color:orange; font-weight:bold; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; font-size:70%;" title="Deprecated - This function has been deprecated but still works. It is best to avoid functions marked as deprecated.">&#160;D&#160;</span>
+</ul> 
+<h2><span class="mw-headline" id="Footnotes">Footnotes</span></h2>
+<div style="font-size:80%;"><ol>
+<li id="footnote_1" style="page-break-inside:avoid; -moz-page-break-inside:avoid; -webkit-page-break-inside:avoid;"><span class="TablePager_nav"><b><a href="#fn_1">^</a></b></span> Function parameters are effectively passed by value, not by reference. When pass by reference is used in LSO-LSL, the reference points to a copy of the value, not to the original.
+</ol></div><span id="PiC"></span>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.524 seconds
+Real time usage: 0.592 seconds
+Preprocessor visited node count: 1713/1000000
+Preprocessor generated node count: 6334/1000000
+Post‐expand include size: 159209/2097152 bytes
+Template argument size: 2449/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 20/100
+-->
+
+<!-- Saved in parser cache with key lindenlab1-mw_:pcache:idhash:2910-0!*!0!!*!*!* and timestamp 20150415003033 and revision id 1172527
+ -->
+<div class="hf-footer"></div><div class="hf-nsfooter"></div><div lang="en" dir="ltr"><div id="mw-pages">
+<h2>Pages in category "LSL Functions"</h2>
+<p>The following 200 pages are in this category, out of 440 total.
+</p>(previous 200) (<a href="/w/index.php?title=Category:LSL_Functions&amp;pagefrom=IntegerToBase64%0ALlIntegerToBase64#mw-pages" title="Category:LSL Functions">next 200</a>)<div lang="en" dir="ltr" class="mw-content-ltr"><table style="width: 100%;"><tr style="vertical-align: top;"><td style="width: 33.3%;"><h3>A</h3>
+<ul><li><a href="/wiki/LlAbs" title="LlAbs">LlAbs</a></li>
+<li><a href="/wiki/LlAcos" title="LlAcos">LlAcos</a></li>
+<li><a href="/wiki/LlAddToLandBanList" title="LlAddToLandBanList">LlAddToLandBanList</a></li>
+<li><a href="/wiki/LlAddToLandPassList" title="LlAddToLandPassList">LlAddToLandPassList</a></li>
+<li><a href="/wiki/LlAdjustSoundVolume" title="LlAdjustSoundVolume">LlAdjustSoundVolume</a></li>
+<li><a href="/wiki/LlAgentInExperience" title="LlAgentInExperience">LlAgentInExperience</a></li>
+<li><a href="/wiki/LlAllowInventoryDrop" title="LlAllowInventoryDrop">LlAllowInventoryDrop</a></li>
+<li><a href="/wiki/LlAngleBetween" title="LlAngleBetween">LlAngleBetween</a></li>
+<li><a href="/wiki/LlApplyImpulse" title="LlApplyImpulse">LlApplyImpulse</a></li>
+<li><a href="/wiki/LlApplyRotationalImpulse" title="LlApplyRotationalImpulse">LlApplyRotationalImpulse</a></li>
+<li><a href="/wiki/LlAsin" title="LlAsin">LlAsin</a></li>
+<li><a href="/wiki/LlAtan2" title="LlAtan2">LlAtan2</a></li>
+<li><a href="/wiki/LlAttachToAvatar" title="LlAttachToAvatar">LlAttachToAvatar</a></li>
+<li><a href="/wiki/LlAttachToAvatarTemp" title="LlAttachToAvatarTemp">LlAttachToAvatarTemp</a></li>
+<li><a href="/wiki/LlAvatarOnLinkSitTarget" title="LlAvatarOnLinkSitTarget">LlAvatarOnLinkSitTarget</a></li>
+<li><a href="/wiki/LlAvatarOnSitTarget" title="LlAvatarOnSitTarget">LlAvatarOnSitTarget</a></li>
+<li><a href="/wiki/LlAxes2Rot" title="LlAxes2Rot">LlAxes2Rot</a></li>
+<li><a href="/wiki/LlAxisAngle2Rot" title="LlAxisAngle2Rot">LlAxisAngle2Rot</a></li></ul><h3>B</h3>
+<ul><li><a href="/wiki/LlBase64ToInteger" title="LlBase64ToInteger">LlBase64ToInteger</a></li>
+<li><a href="/wiki/LlBase64ToString" title="LlBase64ToString">LlBase64ToString</a></li>
+<li><a href="/wiki/LlBreakAllLinks" title="LlBreakAllLinks">LlBreakAllLinks</a></li>
+<li><a href="/wiki/LlBreakLink" title="LlBreakLink">LlBreakLink</a></li></ul><h3>C</h3>
+<ul><li><a href="/wiki/LlCastRay" title="LlCastRay">LlCastRay</a></li>
+<li><a href="/wiki/LlCeil" title="LlCeil">LlCeil</a></li>
+<li><a href="/wiki/LlClearCameraParams" title="LlClearCameraParams">LlClearCameraParams</a></li>
+<li><a href="/wiki/LlClearLinkMedia" title="LlClearLinkMedia">LlClearLinkMedia</a></li>
+<li><a href="/wiki/LlClearPrimMedia" title="LlClearPrimMedia">LlClearPrimMedia</a></li>
+<li><a href="/wiki/LlCloseRemoteDataChannel" title="LlCloseRemoteDataChannel">LlCloseRemoteDataChannel</a></li>
+<li><a href="/wiki/LlCloud" title="LlCloud">LlCloud</a></li>
+<li><a href="/wiki/LlCollisionFilter" title="LlCollisionFilter">LlCollisionFilter</a></li>
+<li><a href="/wiki/LlCollisionSound" title="LlCollisionSound">LlCollisionSound</a></li>
+<li><a href="/wiki/LlCollisionSprite" title="LlCollisionSprite">LlCollisionSprite</a></li>
+<li><a href="/wiki/LlCos" title="LlCos">LlCos</a></li>
+<li><a href="/wiki/LlCreateCharacter" title="LlCreateCharacter">LlCreateCharacter</a></li>
+<li><a href="/wiki/LlCreateKeyValue" title="LlCreateKeyValue">LlCreateKeyValue</a></li>
+<li><a href="/wiki/LlCreateLink" title="LlCreateLink">LlCreateLink</a></li>
+<li><a href="/wiki/LlCSV2List" title="LlCSV2List">LlCSV2List</a></li></ul><h3>D</h3>
+<ul><li><a href="/wiki/LlDataSizeKeyValue" title="LlDataSizeKeyValue">LlDataSizeKeyValue</a></li>
+<li><a href="/wiki/LlDeleteCharacter" title="LlDeleteCharacter">LlDeleteCharacter</a></li>
+<li><a href="/wiki/LlDeleteKeyValue" title="LlDeleteKeyValue">LlDeleteKeyValue</a></li>
+<li><a href="/wiki/LlDeleteSubList" title="LlDeleteSubList">LlDeleteSubList</a></li>
+<li><a href="/wiki/LlDeleteSubString" title="LlDeleteSubString">LlDeleteSubString</a></li>
+<li><a href="/wiki/LlDetachFromAvatar" title="LlDetachFromAvatar">LlDetachFromAvatar</a></li>
+<li><a href="/wiki/LlDetectedGrab" title="LlDetectedGrab">LlDetectedGrab</a></li>
+<li><a href="/wiki/LlDetectedGroup" title="LlDetectedGroup">LlDetectedGroup</a></li>
+<li><a href="/wiki/LlDetectedKey" title="LlDetectedKey">LlDetectedKey</a></li>
+<li><a href="/wiki/LlDetectedLinkNumber" title="LlDetectedLinkNumber">LlDetectedLinkNumber</a></li>
+<li><a href="/wiki/LlDetectedName" title="LlDetectedName">LlDetectedName</a></li>
+<li><a href="/wiki/LlDetectedOwner" title="LlDetectedOwner">LlDetectedOwner</a></li>
+<li><a href="/wiki/LlDetectedPos" title="LlDetectedPos">LlDetectedPos</a></li>
+<li><a href="/wiki/LlDetectedRot" title="LlDetectedRot">LlDetectedRot</a></li>
+<li><a href="/wiki/LlDetectedTouchBinormal" title="LlDetectedTouchBinormal">LlDetectedTouchBinormal</a></li>
+<li><a href="/wiki/LlDetectedTouchFace" title="LlDetectedTouchFace">LlDetectedTouchFace</a></li>
+<li><a href="/wiki/LlDetectedTouchNormal" title="LlDetectedTouchNormal">LlDetectedTouchNormal</a></li>
+<li><a href="/wiki/LlDetectedTouchPos" title="LlDetectedTouchPos">LlDetectedTouchPos</a></li>
+<li><a href="/wiki/LlDetectedTouchST" title="LlDetectedTouchST">LlDetectedTouchST</a></li>
+<li><a href="/wiki/LlDetectedTouchUV" title="LlDetectedTouchUV">LlDetectedTouchUV</a></li>
+<li><a href="/wiki/LlDetectedType" title="LlDetectedType">LlDetectedType</a></li>
+<li><a href="/wiki/LlDetectedVel" title="LlDetectedVel">LlDetectedVel</a></li>
+<li><a href="/wiki/LlDialog" title="LlDialog">LlDialog</a></li>
+<li><a href="/wiki/LlDie" title="LlDie">LlDie</a></li>
+<li><a href="/wiki/LlDumpList2String" title="LlDumpList2String">LlDumpList2String</a></li></ul><h3>E</h3>
+<ul><li><a href="/wiki/LlEdgeOfWorld" title="LlEdgeOfWorld">LlEdgeOfWorld</a></li>
+<li><a href="/wiki/LlEjectFromLand" title="LlEjectFromLand">LlEjectFromLand</a></li>
+<li><a href="/wiki/LlEmail" title="LlEmail">LlEmail</a></li>
+<li><a href="/wiki/LlEscapeURL" title="LlEscapeURL">LlEscapeURL</a></li>
+<li><a href="/wiki/LlEuler2Rot" title="LlEuler2Rot">LlEuler2Rot</a></li></ul></td>
+<td style="width: 33.3%;"><h3>E cont.</h3>
+<ul><li><a href="/wiki/LlEvade" title="LlEvade">LlEvade</a></li>
+<li><a href="/wiki/LlExecCharacterCmd" title="LlExecCharacterCmd">LlExecCharacterCmd</a></li></ul><h3>F</h3>
+<ul><li><a href="/wiki/LlFabs" title="LlFabs">LlFabs</a></li>
+<li><a href="/wiki/LlFleeFrom" title="LlFleeFrom">LlFleeFrom</a></li>
+<li><a href="/wiki/LlFloor" title="LlFloor">LlFloor</a></li>
+<li><a href="/wiki/LlForceMouselook" title="LlForceMouselook">LlForceMouselook</a></li>
+<li><a href="/wiki/LlFrand" title="LlFrand">LlFrand</a></li></ul><h3>G</h3>
+<ul><li><a href="/wiki/LlGenerateKey" title="LlGenerateKey">LlGenerateKey</a></li>
+<li><a href="/wiki/LlGetAccel" title="LlGetAccel">LlGetAccel</a></li>
+<li><a href="/wiki/LlGetAgentInfo" title="LlGetAgentInfo">LlGetAgentInfo</a></li>
+<li><a href="/wiki/LlGetAgentLanguage" title="LlGetAgentLanguage">LlGetAgentLanguage</a></li>
+<li><a href="/wiki/LlGetAgentList" title="LlGetAgentList">LlGetAgentList</a></li>
+<li><a href="/wiki/LlGetAgentSize" title="LlGetAgentSize">LlGetAgentSize</a></li>
+<li><a href="/wiki/LlGetAlpha" title="LlGetAlpha">LlGetAlpha</a></li>
+<li><a href="/wiki/LlGetAndResetTime" title="LlGetAndResetTime">LlGetAndResetTime</a></li>
+<li><a href="/wiki/LlGetAnimation" title="LlGetAnimation">LlGetAnimation</a></li>
+<li><a href="/wiki/LlGetAnimationList" title="LlGetAnimationList">LlGetAnimationList</a></li>
+<li><a href="/wiki/LlGetAnimationOverride" title="LlGetAnimationOverride">LlGetAnimationOverride</a></li>
+<li><a href="/wiki/LlGetAttached" title="LlGetAttached">LlGetAttached</a></li>
+<li><a href="/wiki/LlGetBoundingBox" title="LlGetBoundingBox">LlGetBoundingBox</a></li>
+<li><a href="/wiki/LlGetCameraPos" title="LlGetCameraPos">LlGetCameraPos</a></li>
+<li><a href="/wiki/LlGetCameraRot" title="LlGetCameraRot">LlGetCameraRot</a></li>
+<li><a href="/wiki/LlGetCenterOfMass" title="LlGetCenterOfMass">LlGetCenterOfMass</a></li>
+<li><a href="/wiki/LlGetClosestNavPoint" title="LlGetClosestNavPoint">LlGetClosestNavPoint</a></li>
+<li><a href="/wiki/LlGetColor" title="LlGetColor">LlGetColor</a></li>
+<li><a href="/wiki/LlGetCreator" title="LlGetCreator">LlGetCreator</a></li>
+<li><a href="/wiki/LlGetDate" title="LlGetDate">LlGetDate</a></li>
+<li><a href="/wiki/LlGetDisplayName" title="LlGetDisplayName">LlGetDisplayName</a></li>
+<li><a href="/wiki/LlGetEnergy" title="LlGetEnergy">LlGetEnergy</a></li>
+<li><a href="/wiki/LlGetEnv" title="LlGetEnv">LlGetEnv</a></li>
+<li><a href="/wiki/LlGetExperienceDetails" title="LlGetExperienceDetails">LlGetExperienceDetails</a></li>
+<li><a href="/wiki/LlGetExperienceErrorMessage" title="LlGetExperienceErrorMessage">LlGetExperienceErrorMessage</a></li>
+<li><a href="/wiki/LlGetForce" title="LlGetForce">LlGetForce</a></li>
+<li><a href="/wiki/LlGetFreeMemory" title="LlGetFreeMemory">LlGetFreeMemory</a></li>
+<li><a href="/wiki/LlGetFreeURLs" title="LlGetFreeURLs">LlGetFreeURLs</a></li>
+<li><a href="/wiki/LlGetGeometricCenter" title="LlGetGeometricCenter">LlGetGeometricCenter</a></li>
+<li><a href="/wiki/LlGetGMTclock" title="LlGetGMTclock">LlGetGMTclock</a></li>
+<li><a href="/wiki/LlGetHTTPHeader" title="LlGetHTTPHeader">LlGetHTTPHeader</a></li>
+<li><a href="/wiki/LlGetInventoryCreator" title="LlGetInventoryCreator">LlGetInventoryCreator</a></li>
+<li><a href="/wiki/LlGetInventoryKey" title="LlGetInventoryKey">LlGetInventoryKey</a></li>
+<li><a href="/wiki/LlGetInventoryName" title="LlGetInventoryName">LlGetInventoryName</a></li>
+<li><a href="/wiki/LlGetInventoryNumber" title="LlGetInventoryNumber">LlGetInventoryNumber</a></li>
+<li><a href="/wiki/LlGetInventoryPermMask" title="LlGetInventoryPermMask">LlGetInventoryPermMask</a></li>
+<li><a href="/wiki/LlGetInventoryType" title="LlGetInventoryType">LlGetInventoryType</a></li>
+<li><a href="/wiki/LlGetKey" title="LlGetKey">LlGetKey</a></li>
+<li><a href="/wiki/LlGetLandOwnerAt" title="LlGetLandOwnerAt">LlGetLandOwnerAt</a></li>
+<li><a href="/wiki/LlGetLinkKey" title="LlGetLinkKey">LlGetLinkKey</a></li>
+<li><a href="/wiki/LlGetLinkMedia" title="LlGetLinkMedia">LlGetLinkMedia</a></li>
+<li><a href="/wiki/LlGetLinkName" title="LlGetLinkName">LlGetLinkName</a></li>
+<li><a href="/wiki/LlGetLinkNumber" title="LlGetLinkNumber">LlGetLinkNumber</a></li>
+<li><a href="/wiki/LlGetLinkNumberOfSides" title="LlGetLinkNumberOfSides">LlGetLinkNumberOfSides</a></li>
+<li><span class="redirect-in-category"><a href="/wiki/LlGetLinkPrimitiveParams" class="mw-redirect" title="LlGetLinkPrimitiveParams">LlGetLinkPrimitiveParams</a></span></li>
+<li><a href="/wiki/LlGetListEntryType" title="LlGetListEntryType">LlGetListEntryType</a></li>
+<li><a href="/wiki/LlGetListLength" title="LlGetListLength">LlGetListLength</a></li>
+<li><a href="/wiki/LlGetLocalPos" title="LlGetLocalPos">LlGetLocalPos</a></li>
+<li><a href="/wiki/LlGetLocalRot" title="LlGetLocalRot">LlGetLocalRot</a></li>
+<li><a href="/wiki/LlGetMass" title="LlGetMass">LlGetMass</a></li>
+<li><a href="/wiki/LlGetMassMKS" title="LlGetMassMKS">LlGetMassMKS</a></li>
+<li><a href="/wiki/LlGetMaxScaleFactor" title="LlGetMaxScaleFactor">LlGetMaxScaleFactor</a></li>
+<li><a href="/wiki/LlGetMemoryLimit" title="LlGetMemoryLimit">LlGetMemoryLimit</a></li>
+<li><a href="/wiki/LlGetMinScaleFactor" title="LlGetMinScaleFactor">LlGetMinScaleFactor</a></li>
+<li><a href="/wiki/LlGetNextEmail" title="LlGetNextEmail">LlGetNextEmail</a></li>
+<li><a href="/wiki/LlGetNotecardLine" title="LlGetNotecardLine">LlGetNotecardLine</a></li>
+<li><a href="/wiki/LlGetNumberOfNotecardLines" title="LlGetNumberOfNotecardLines">LlGetNumberOfNotecardLines</a></li>
+<li><a href="/wiki/LlGetNumberOfPrims" title="LlGetNumberOfPrims">LlGetNumberOfPrims</a></li>
+<li><a href="/wiki/LlGetNumberOfSides" title="LlGetNumberOfSides">LlGetNumberOfSides</a></li>
+<li><a href="/wiki/LlGetObjectDesc" title="LlGetObjectDesc">LlGetObjectDesc</a></li></ul></td>
+<td style="width: 33.3%;"><h3>G cont.</h3>
+<ul><li><a href="/wiki/LlGetObjectDetails" title="LlGetObjectDetails">LlGetObjectDetails</a></li>
+<li><a href="/wiki/LlGetObjectMass" title="LlGetObjectMass">LlGetObjectMass</a></li>
+<li><a href="/wiki/LlGetObjectName" title="LlGetObjectName">LlGetObjectName</a></li>
+<li><a href="/wiki/LlGetObjectPermMask" title="LlGetObjectPermMask">LlGetObjectPermMask</a></li>
+<li><a href="/wiki/LlGetObjectPrimCount" title="LlGetObjectPrimCount">LlGetObjectPrimCount</a></li>
+<li><a href="/wiki/LlGetOmega" title="LlGetOmega">LlGetOmega</a></li>
+<li><a href="/wiki/LlGetOwner" title="LlGetOwner">LlGetOwner</a></li>
+<li><a href="/wiki/LlGetOwnerKey" title="LlGetOwnerKey">LlGetOwnerKey</a></li>
+<li><a href="/wiki/LlGetParcelDetails" title="LlGetParcelDetails">LlGetParcelDetails</a></li>
+<li><a href="/wiki/LlGetParcelFlags" title="LlGetParcelFlags">LlGetParcelFlags</a></li>
+<li><a href="/wiki/LlGetParcelMaxPrims" title="LlGetParcelMaxPrims">LlGetParcelMaxPrims</a></li>
+<li><a href="/wiki/LlGetParcelMusicURL" title="LlGetParcelMusicURL">LlGetParcelMusicURL</a></li>
+<li><a href="/wiki/LlGetParcelPrimCount" title="LlGetParcelPrimCount">LlGetParcelPrimCount</a></li>
+<li><a href="/wiki/LlGetParcelPrimOwners" title="LlGetParcelPrimOwners">LlGetParcelPrimOwners</a></li>
+<li><a href="/wiki/LlGetPermissions" title="LlGetPermissions">LlGetPermissions</a></li>
+<li><a href="/wiki/LlGetPermissionsKey" title="LlGetPermissionsKey">LlGetPermissionsKey</a></li>
+<li><a href="/wiki/LlGetPhysicsMaterial" title="LlGetPhysicsMaterial">LlGetPhysicsMaterial</a></li>
+<li><a href="/wiki/LlGetPos" title="LlGetPos">LlGetPos</a></li>
+<li><a href="/wiki/LlGetPrimitiveParams" title="LlGetPrimitiveParams">LlGetPrimitiveParams</a></li>
+<li><a href="/wiki/LlGetPrimMediaParams" title="LlGetPrimMediaParams">LlGetPrimMediaParams</a></li>
+<li><a href="/wiki/LlGetRegionAgentCount" title="LlGetRegionAgentCount">LlGetRegionAgentCount</a></li>
+<li><a href="/wiki/LlGetRegionCorner" title="LlGetRegionCorner">LlGetRegionCorner</a></li>
+<li><a href="/wiki/LlGetRegionFlags" title="LlGetRegionFlags">LlGetRegionFlags</a></li>
+<li><a href="/wiki/LlGetRegionFPS" title="LlGetRegionFPS">LlGetRegionFPS</a></li>
+<li><a href="/wiki/LlGetRegionName" title="LlGetRegionName">LlGetRegionName</a></li>
+<li><a href="/wiki/LlGetRegionTimeDilation" title="LlGetRegionTimeDilation">LlGetRegionTimeDilation</a></li>
+<li><a href="/wiki/LlGetRootPosition" title="LlGetRootPosition">LlGetRootPosition</a></li>
+<li><a href="/wiki/LlGetRootRotation" title="LlGetRootRotation">LlGetRootRotation</a></li>
+<li><a href="/wiki/LlGetRot" title="LlGetRot">LlGetRot</a></li>
+<li><a href="/wiki/LlGetScale" title="LlGetScale">LlGetScale</a></li>
+<li><a href="/wiki/LlGetScriptName" title="LlGetScriptName">LlGetScriptName</a></li>
+<li><a href="/wiki/LlGetScriptState" title="LlGetScriptState">LlGetScriptState</a></li>
+<li><a href="/wiki/LlGetSimStats" title="LlGetSimStats">LlGetSimStats</a></li>
+<li><a href="/wiki/LlGetSimulatorHostname" title="LlGetSimulatorHostname">LlGetSimulatorHostname</a></li>
+<li><a href="/wiki/LlGetSPMaxMemory" title="LlGetSPMaxMemory">LlGetSPMaxMemory</a></li>
+<li><a href="/wiki/LlGetStartParameter" title="LlGetStartParameter">LlGetStartParameter</a></li>
+<li><a href="/wiki/LlGetStaticPath" title="LlGetStaticPath">LlGetStaticPath</a></li>
+<li><a href="/wiki/LlGetStatus" title="LlGetStatus">LlGetStatus</a></li>
+<li><a href="/wiki/LlGetSubString" title="LlGetSubString">LlGetSubString</a></li>
+<li><a href="/wiki/LlGetSunDirection" title="LlGetSunDirection">LlGetSunDirection</a></li>
+<li><a href="/wiki/LlGetTexture" title="LlGetTexture">LlGetTexture</a></li>
+<li><a href="/wiki/LlGetTextureOffset" title="LlGetTextureOffset">LlGetTextureOffset</a></li>
+<li><a href="/wiki/LlGetTextureRot" title="LlGetTextureRot">LlGetTextureRot</a></li>
+<li><a href="/wiki/LlGetTextureScale" title="LlGetTextureScale">LlGetTextureScale</a></li>
+<li><a href="/wiki/LlGetTime" title="LlGetTime">LlGetTime</a></li>
+<li><a href="/wiki/LlGetTimeOfDay" title="LlGetTimeOfDay">LlGetTimeOfDay</a></li>
+<li><a href="/wiki/LlGetTimestamp" title="LlGetTimestamp">LlGetTimestamp</a></li>
+<li><a href="/wiki/LlGetTorque" title="LlGetTorque">LlGetTorque</a></li>
+<li><a href="/wiki/LlGetUnixTime" title="LlGetUnixTime">LlGetUnixTime</a></li>
+<li><a href="/wiki/LlGetUsedMemory" title="LlGetUsedMemory">LlGetUsedMemory</a></li>
+<li><a href="/wiki/LlGetUsername" title="LlGetUsername">LlGetUsername</a></li>
+<li><a href="/wiki/LlGetVel" title="LlGetVel">LlGetVel</a></li>
+<li><a href="/wiki/LlGetWallclock" title="LlGetWallclock">LlGetWallclock</a></li>
+<li><a href="/wiki/LlGiveInventory" title="LlGiveInventory">LlGiveInventory</a></li>
+<li><a href="/wiki/LlGiveInventoryList" title="LlGiveInventoryList">LlGiveInventoryList</a></li>
+<li><a href="/wiki/LlGiveMoney" title="LlGiveMoney">LlGiveMoney</a></li>
+<li><a href="/wiki/LlGodLikeRezObject" title="LlGodLikeRezObject">LlGodLikeRezObject</a></li>
+<li><a href="/wiki/LlGround" title="LlGround">LlGround</a></li>
+<li><a href="/wiki/LlGroundContour" title="LlGroundContour">LlGroundContour</a></li>
+<li><a href="/wiki/LlGroundNormal" title="LlGroundNormal">LlGroundNormal</a></li>
+<li><a href="/wiki/LlGroundRepel" title="LlGroundRepel">LlGroundRepel</a></li>
+<li><a href="/wiki/LlGroundSlope" title="LlGroundSlope">LlGroundSlope</a></li></ul><h3>H</h3>
+<ul><li><a href="/wiki/LlHTTPRequest" title="LlHTTPRequest">LlHTTPRequest</a></li>
+<li><a href="/wiki/LlHTTPResponse" title="LlHTTPResponse">LlHTTPResponse</a></li></ul><h3>I</h3>
+<ul><li><a href="/wiki/LlInsertString" title="LlInsertString">LlInsertString</a></li>
+<li><a href="/wiki/LlInstantMessage" title="LlInstantMessage">LlInstantMessage</a></li></ul></td>
+</tr></table></div>(previous 200) (<a href="/w/index.php?title=Category:LSL_Functions&amp;pagefrom=IntegerToBase64%0ALlIntegerToBase64#mw-pages" title="Category:LSL Functions">next 200</a>)
+</div></div></div><div class="printfooter">
+Retrieved from "<a href="http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions&amp;oldid=1172527">http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions&amp;oldid=1172527</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:LSL_Keywords" title="Category:LSL Keywords">LSL Keywords</a></li><li><a href="/wiki/Category:LSL_Flow_Control" title="Category:LSL Flow Control">LSL Flow Control</a></li><li><a href="/wiki/Category:LSL" title="Category:LSL">LSL</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-ns-shown">Hidden categories: <ul><li><a href="/wiki/Category:Pages_with_translation/de" title="Category:Pages with translation/de">Pages with translation/de</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/es" title="Category:Needs Translation/LSL/es">Needs Translation/LSL/es</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/el" title="Category:Needs Translation/LSL/el">Needs Translation/LSL/el</a></li><li><a href="/wiki/Category:Pages_with_translation/fr" title="Category:Pages with translation/fr">Pages with translation/fr</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/he" title="Category:Needs Translation/LSL/he">Needs Translation/LSL/he</a></li><li><a href="/wiki/Category:Pages_with_translation/it" title="Category:Pages with translation/it">Pages with translation/it</a></li><li><a href="/wiki/Category:Pages_with_translation/ja" title="Category:Pages with translation/ja">Pages with translation/ja</a></li><li><a href="/wiki/Category:Pages_with_translation/ko" title="Category:Pages with translation/ko">Pages with translation/ko</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/nl" title="Category:Needs Translation/LSL/nl">Needs Translation/LSL/nl</a></li><li><a href="/wiki/Category:Pages_with_translation/hu" title="Category:Pages with translation/hu">Pages with translation/hu</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/no" title="Category:Needs Translation/LSL/no">Needs Translation/LSL/no</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/da" title="Category:Needs Translation/LSL/da">Needs Translation/LSL/da</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/sv" title="Category:Needs Translation/LSL/sv">Needs Translation/LSL/sv</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/tr" title="Category:Needs Translation/LSL/tr">Needs Translation/LSL/tr</a></li><li><a href="/wiki/Category:Pages_with_translation/pl" title="Category:Pages with translation/pl">Pages with translation/pl</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/pt" title="Category:Needs Translation/LSL/pt">Needs Translation/LSL/pt</a></li><li><a href="/wiki/Category:Pages_with_translation/ru" title="Category:Pages with translation/ru">Pages with translation/ru</a></li><li><a href="/wiki/Category:Needs_Translation/LSL/uk" title="Category:Needs Translation/LSL/uk">Needs Translation/LSL/uk</a></li><li><a href="/wiki/Category:Pages_with_translation/zh-Hans" title="Category:Pages with translation/zh-Hans">Pages with translation/zh-Hans</a></li><li><a href="/wiki/Category:Pages_with_translation/zh-Hant" title="Category:Pages with translation/zh-Hant">Pages with translation/zh-Hant</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<h2>Navigation menu</h2>
+	<div id="p-cactions" class="portlet" role="navigation">
+		<h3>Views</h3>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-category" class="selected"><a href="/wiki/Category:LSL_Functions" title="View the category page [c]" accesskey="c">Category</a></li>
+				<li id="ca-talk"><a href="/wiki/Category_talk:LSL_Functions" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="/w/index.php?title=Category:LSL_Functions&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/w/index.php?title=Category:LSL_Functions&amp;action=history" rel="archives" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal" role="navigation">
+		<h3>Personal tools</h3>
+		<div class="pBody">
+			<ul>
+				<li id="pt-openidlogin"><a href="/w/index.php?title=Special:OpenIDLogin&amp;returnto=Category:LSL_Functions">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo" role="banner">
+<a href="/wiki/Main_Page" style="background-image: url(http://d1yjxggot69855.cloudfront.net/images/secondlife.jpg);" title="Visit the main page"></a>
+	</div>
+	<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navigation</h3>
+		<div class='pBody'>
+			<ul>
+				<li id="n-About-.26-Help"><a href="/wiki/Project:About">About &amp; Help</a></li>
+				<li id="n-Editing-Guidelines"><a href="/wiki/Editing_Guidelines">Editing Guidelines</a></li>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent Changes</a></li>
+				<li id="n-Advanced-Search"><a href="/wiki/Special:Search">Advanced Search</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-other_sites" role="navigation">
+		<h3>other sites</h3>
+		<div class='pBody'>
+			<ul>
+				<li id="n-knowledgebase"><a href="http://community.secondlife.com/t5/English-Knowledge-Base/tkb-p/English_KB%40tkb" rel="nofollow">Knowledge Base</a></li>
+				<li id="n-Blogs-.26-Forums"><a href="http://blogs.secondlife.com" rel="nofollow">Blogs &amp; Forums</a></li>
+				<li id="n-secondlife.com"><a href="http://secondlife.com" rel="nofollow">secondlife.com</a></li>
+				<li id="n-Bug-Tracker"><a href="http://jira.secondlife.com" rel="nofollow">Bug Tracker</a></li>
+				<li id="n-Support-Portal"><a href="http://secondlife.com/support" rel="nofollow">Support Portal</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet" role="search">
+		<h3><label for="searchInput">Search</label></h3>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input type="search" name="search" placeholder="Search" title="Search Second Life Wiki [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+			</form>
+
+					</div>
+	</div>
+	<div class="portlet" id="p-tb" role="navigation">
+		<h3>Tools</h3>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Category:LSL_Functions" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Category:LSL_Functions" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+				<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="/w/index.php?title=Category:LSL_Functions&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+				<li id="t-permalink"><a href="/w/index.php?title=Category:LSL_Functions&amp;oldid=1172527" title="Permanent link to this revision of the page">Permanent link</a></li>
+				<li id="t-info"><a href="/w/index.php?title=Category:LSL_Functions&amp;action=info">Page information</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet" role="navigation">
+		<h3>In other languages</h3>
+		<div class="pBody">
+			<ul>
+				<li class="interlanguage-link interwiki-en"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions" title="Category:LSL Functions – English" lang="en" hreflang="en">English</a></li>
+				<li class="interlanguage-link interwiki-de"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/de" title="Category:LSL Functions – Deutsch" lang="de" hreflang="de">Deutsch</a></li>
+				<li class="interlanguage-link interwiki-fr"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/fr" title="Category:LSL Functions – français" lang="fr" hreflang="fr">Français</a></li>
+				<li class="interlanguage-link interwiki-it"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/it" title="Category:LSL Functions – italiano" lang="it" hreflang="it">Italiano</a></li>
+				<li class="interlanguage-link interwiki-ja"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/ja" title="Category:LSL Functions – 日本語" lang="ja" hreflang="ja">日本語</a></li>
+				<li class="interlanguage-link interwiki-ko"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/ko" title="Category:LSL Functions – 한국어" lang="ko" hreflang="ko">한국어</a></li>
+				<li class="interlanguage-link interwiki-hu"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/hu" title="Category:LSL Functions – magyar" lang="hu" hreflang="hu">Magyar</a></li>
+				<li class="interlanguage-link interwiki-pl"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/pl" title="Category:LSL Functions – polski" lang="pl" hreflang="pl">Polski</a></li>
+				<li class="interlanguage-link interwiki-ru"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/ru" title="Category:LSL Functions – русский" lang="ru" hreflang="ru">Русский</a></li>
+				<li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/zh-Hans" title="Category:LSL Functions – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans">中文（简体）‎</a></li>
+				<li class="interlanguage-link interwiki-zh-hant"><a href="https://wiki.secondlife.com/wiki/Category:LSL_Functions/zh-Hant" title="Category:LSL Functions – 中文（繁體）‎" lang="zh-Hant" hreflang="zh-Hant">中文（繁體）‎</a></li>
+			</ul>
+
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer" role="contentinfo">
+	<div id="f-copyrightico">
+		<a href="http://www.creativecommons.org/licenses/by-sa/3.0/"><img src="/static/2007/img/somerights20.png" alt="Creative Commons Attribution-Share Alike 3.0" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="//www.mediawiki.org/"><img src="http://d1yjxggot69855.cloudfront.net/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 8 September 2012, at 07:42.</li>
+		<li id="viewcount">This page has been accessed 2,006,873 times.</li>
+		<li id="copyright">Copyright © 2009 Linden Research, Inc. Licensed under <a href="/wiki/Project:Terms_of_Service" title="Project:Terms of Service">Creative Commons Attribution-Share Alike 3.0</a> unless otherwise noted.</li>
+		<li id="privacy"><a href="/wiki/Project:Terms_of_Use" title="Project:Terms of Use">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/Project:About" title="Project:About">About Second Life Wiki</a></li>
+		<li id="disclaimer"><a href="/wiki/Project:Terms_of_Use" title="Project:Terms of Use">Terms of Use</a></li>
+	</ul>
+</div>
+</div>
+<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script src="http://wiki.secondlife.com/w/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":822});
+}</script></body></html>

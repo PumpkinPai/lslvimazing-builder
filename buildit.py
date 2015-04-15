@@ -15,17 +15,12 @@ import os
 import yaml
 
 
-if __name__ == "__main__":
-
+def getConf():
     confFile = open('config.yaml', 'r')
     conf = yaml.load(confFile)
 
-    depFile = conf['scraper']['depFile']
-    try:
-        os.remove(depFile)
-    except:
-        pass
-
+# Main Scrapes
+def scrapeMain():
     for r in conf['scraper']['queries']:
         name    = r['name']
         page    = r['page']
@@ -39,24 +34,30 @@ if __name__ == "__main__":
         search  = conf['scraper']['searchTerm']
         delim   = conf['scraper']['delim']
         # print('Getting ' + url)
-        spidey.crawl(url, begin, end, search, delim, txtFile, depFile)
+        spidey.crawl(url, begin, end, search, delim, txtFile)
         print('Cleaning ' + txtFile)
         # count, first, last = spidey.cleanResults(txtFile, rules, ignore)
         spidey.cleanResults(txtFile, rules, replace, ignore)
         # print('Captured ' + str(count) + ' results from ' + first + ' to ' + last)
         print('Done!')
 
+# Deprecated Functions
+def scrapeDeps():
+    depFile = 'LSL_Deprecated.txt'
+    try:
+        os.remove(depFile)
+    except:
+        pass
+    searchTerm = '<s>'
+    pageBegin = 'title="LlAbs"'
+    pageEnd = 'id="footnote_1"'
+    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
+    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFile)
+    spidey.cleanResults(depFile, ['firstLower'], False, ignore)
+    print('Done!')
 
-    # Simple types will be manual
-    manualFile = open('LSL_Manual.txt', 'r')
-
-    # Create directories and cp plug-* files to proper files and locations 
-    for r in conf['structure']:
-        # todo
-        print(r)
-
-
-    # Generate lsl.vim syntax file
+# Generate main syntax file
+def generateSyntax():
     syntaxFile = open('plug-syntax.txt', 'w')
     syntaxTxt  = manualFile.read()
 
@@ -83,7 +84,22 @@ if __name__ == "__main__":
     syntaxTxt = syntaxTxt.replace('*DEPRECATED*', deprecatedTxt)
 
     syntaxFile.write(syntaxTxt)
-
     syntaxFile.close
 
-    exit()
+if __name__ == "__main__":
+
+    getConf()
+
+    scrapeMain()
+
+    scrapeDeps()
+
+    # Simple types will be manual
+    manualFile = open('LSL_Manual.txt', 'r')
+
+    # Create directories and cp plug-* files to proper files and locations 
+    for r in conf['structure']:
+        # todo
+        print(r)
+
+    generateSyntax()

@@ -7,7 +7,7 @@ import urllib.request
 import os
 
 # Crawl url, look for searchTerm, grab thing within delim, put it in txtFile
-def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile, badFile='bad.txt'):
+def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
     # temp- we now have decent files to play with
     # return
 
@@ -29,10 +29,6 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile, badFile='bad.txt'
             startHtml = html.find(pageBegin)
             endHtml   = html.find(pageEnd)
             html = html[startHtml:endHtml]
-            # Some wiki pages are silly and put spaces and junk between tags
-            # Lets fix that... todo- do it with regex to allow for more junk
-            html = html.replace('<s>', '')
-            html = html.replace('> <', '><')
 
             # MULTI
             # If the category spans multiple pages, cry
@@ -47,9 +43,7 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile, badFile='bad.txt'
 
             # PROCESS HTML and save
             foundList = []
-            deprecatedList =[]
             saveFile = open(txtFile, 'a')
-            depFile  = open(badFile, 'a')
             while True:
                 startFind  = html.find(searchTerm) + len(searchTerm)
                 startFound = html.find(delim[0], startFind)
@@ -57,18 +51,7 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile, badFile='bad.txt'
                 found      = html[startFound + 1 : endFound]
                 html       = html[endFound:]
 
-                # DEPRECATIONS 
-                # Everything struck out is marvelously either dep'd, god mode,
-                # or broken so we'll make them all show as errors in code.
-                deptag     = '</s>'
-                nextFind   = html.find(searchTerm) + len(searchTerm)
-                # debug- print('Initial find: ' + str(startFind) + ' nextFind: ' + str(nextFind))
-                deprecated = html.find(deptag, 0, nextFind)
-
-                if deprecated > 0 and found:
-                    deprecatedList.append(found)
-                    print('Deprecation: ' + found)
-                elif found:
+                if found:
                     foundList.append(found)
                 else:
                     foundTxt = '\n'.join(foundList) + '\n'
