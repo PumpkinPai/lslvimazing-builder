@@ -9,7 +9,7 @@ import os
 # Crawl url, look for searchTerm, grab thing within delim, put it in txtFile
 def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
     # temp- we now have decent files to play with
-    # return
+    # return ('x', 'x')
 
     multi = True
     multiQuery = ''
@@ -56,25 +56,26 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
                 html       = html[endFound:]
 
                 if found:
-                    foundCount += 1 
+                    findCount += 1 
                     foundList.append(found)
                 else:
                     foundTxt = '\n'.join(foundList) + '\n'
                     saveFile.write(foundTxt)
                     saveFile.close
                     break
-        return foundCount, pageCount 
+        return (str(findCount), str(pageCount))
                      
     except Exception as e:
         print(str(e))
-        return False
+        return (0, 0) 
 
-def cleanResults(dirtyFile, specialRules, replace, ignoreList):
+def cleanResults(dirtyFilename, specialRules, replace, ignoreList):
     try:
-        readFile = open(dirtyFile, 'r')
+        readFile = open(dirtyFilename, 'r')
     except Exception as e:
         print(str(e))
         return
+
     resultList = []
     for line in readFile:
         resultList.append(line.strip('\n'))
@@ -96,11 +97,18 @@ def cleanResults(dirtyFile, specialRules, replace, ignoreList):
     resultList = cleanList
     cleanList = []
     for txt in resultList:
-        dirty = False                       # Assume they took a bath
-        if txt in cleanList: dirty = True   # She's a replicant
-        if txt.lower() in ignoreList: dirty = True
-        if dirty == False:
+        # Assume they took a bath
+        dirty = ''
+        if txt in cleanList: 
+            # She's a replicant
+            dirty = ' a replicant'   
+        if txt.lower() in ignoreList: 
+            dirty = ' in the ignoreList' 
+        if dirty == '':
             cleanList.append(txt)
+        else:
+            pass
+            # print('Removed: ' + txt + ' because it was' + dirty) 
 
     # Round 3, replacements
     if replace[0]:
@@ -112,110 +120,13 @@ def cleanResults(dirtyFile, specialRules, replace, ignoreList):
 
     readFile.close
     resultTxt = '\n'.join(cleanList)
-    writeFile = open(dirtyFile, 'w')
+    writeFile = open(dirtyFilename, 'w')
     writeFile.write(resultTxt)
     writeFile.close
     
     # return number, first and last
-    return True # str(len(resultList)), resultList[0], resultList[1]
+    return (str(len(resultList)), resultList[0], resultList[-1])
 
-''' Old stuff to delete
-def cleanFunctions(dirtyFile):
-    print('Cleaning lsl functon results...')
-    try:
-        readFile = open(dirtyFile, 'r')
-    except Exception as e:
-        print(str(e))
-        return
-    # make a list out of the file
-    resultList = []
-    for line in readFile:
-        # make it 'll' instead of 'Ll'
-        line = line[0].lower() + line[1:]
-        resultList.append(line.strip('\n'))
-    
-    resultList = cleanList(resultList)
-    
-    readFile.close
-    resultTxt = '\n'.join(resultList)
-    writeFile = open(dirtyFile, 'w')
-    writeFile.write(resultTxt)
-    writeFile.close
-    print('Finished getting ' + str(len(resultList)) + ' functions!')
-    print('From ' + resultList[0] + ' to ' + resultList[-1])
-
-
-def cleanEvents(dirtyFile):
-    print('Cleaning lsl event results...')
-    try:
-        readFile = open(dirtyFile, 'r')
-    except Exception as e: 
-        print(str(e))
-        return
-
-    # Make a list of the file
-    resultList = []
-    for line in readFile:
-        resultList.append(line.strip('\n'))
-
-    resultList = cleanList(resultList)
-    # 'state_entry' vs 'state entry'
-    for i in range(len(resultList)):
-        resultList[i] = resultList[i].replace(' ', '_')
-        resultList[i] = resultList[i].lower()
-
-    readFile.close
-    resultTxt = '\n'.join(resultList)
-    writeFile = open(dirtyFile, 'w')
-    writeFile.write(resultTxt)
-    writeFile.close
-    print('Finished getting ' + str(len(resultList)) + ' events!')
-    print('From ' + resultList[0] + ' to ' + resultList[-1])
-
-
-def cleanConstants(dirtyFile):
-    print('Cleaning lsl constant results...')
-    try:
-        readFile = open(dirtyFile, 'r')
-    except Exception as e: 
-        print(str(e))
-        return
-
-    # Make a list of the file
-    resultList = []
-    for line in readFile:
-       resultList.append(line.strip('\n'))
-
-    resultList = cleanList(resultList)
-    # 'LINK_ROOT' vs 'LINK ROOT'
-    for i in range(len(resultList)):
-        resultList[i] = resultList[i].replace(' ', '_')
-        resultList[i] = resultList[i].upper()
-
-    readFile.close
-    resultTxt = '\n'.join(resultList)
-    writeFile = open(dirtyFile, 'w')
-    writeFile.write(resultTxt)
-    writeFile.close
-    print('Finished getting ' + str(len(resultList)) + ' constants!')
-    print('From ' + resultList[0] + ' to ' + resultList[-1])
-
-
-# Removes duplicates and garbage lines
-def cleanList(dirtyList):
-    cleanList = []
-    ignoreList = ['\\n', '(', '(previous 200) (', 'next 200', 'previous 200', 
-                  '(previous 200) (next 200)\\n'] 
-    for txt in dirtyList:
-        dirty = False
-        if txt in cleanList:  dirty = True
-        if txt.lower() in ignoreList: dirty = True
-        if dirty == False:
-            cleanList.append(txt)
-
-    return cleanList
-
-'''
 
 if __name__ == "__main__":
     print('The main file is "buildit.py" Run that instead.')

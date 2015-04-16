@@ -27,30 +27,27 @@ def scrapeMain():
         page    = r['page']
         rules   = r['rules']
         replace = r['replace']
-        txtFile = name + '.txt'
+        txtFilename = name + '.txt'
         ignore  = conf['scraper']['ignore'] 
         url     = conf['scraper']['url'] + page 
         begin   = conf['scraper']['pageBegin']
         end     = conf['scraper']['pageEnd']
         search  = conf['scraper']['searchTerm']
         delim   = conf['scraper']['delim']
-        # print('Getting ' + url)
-        foundCount = 0
-        pageCount = 0
-        foundCount, pageCount = spidey.crawl(url, begin, end, search, delim, txtFile)
-        print('Found: ' + str(foundCount) + ' results on ' + str(pageCount) + 'pages') # debug
-        print('Cleaning ' + txtFile)
-        # count, first, last = spidey.cleanResults(txtFile, rules, ignore)
-        success = spidey.cleanResults(txtFile, rules, replace, ignore)
-        print('Clean success: ' + str(success)) # debug
-        # print('Captured ' + str(count) + ' results from ' + first + ' to ' + last)
+        founds, pages = spidey.crawl(url, begin, end, search, delim, txtFilename)
+        print('Found: ' + str(founds) + ' results on ' + str(pages) + ' pages')
+        print('Cleaning ' + txtFilename)
+        total, first, last = spidey.cleanResults(txtFilename, rules, replace, ignore)
+        print('Captured ' + str(total) + ' results from ' + first + ' to ' + last)
         print('Done!')
 
 # Deprecated Functions
 def scrapeDeps():
-    depFile = 'LSL_Deprecated.txt'
+    print('Sorting deprecations...')
+    depFilename = 'LSL_Deprecated.txt'
     try:
-        os.remove(depFile)
+        pass
+        # os.remove(depFilename)
     except:
         pass
     searchTerm = '<s>'
@@ -58,19 +55,30 @@ def scrapeDeps():
     pageEnd = 'id="footnote_1"'
     delim = ['>','<']
     url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
-    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFile)
-    spidey.cleanResults(depFile, ['firstLower'], [False], [False])
+    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFilename)
+    spidey.cleanResults(depFilename, ['firstLower'], [False], [False])
+
     # Remove deps from captured result files
-    depsTxt = open(depFile, 'r')
+    depFile = open(depFilename, 'r')
     for r in conf['scraper']['queries']:
-        txtFile = r['name'] + '.txt'
-        txt = open(txtFile, 'r')
-        for line in depsTxt:
-            txt = txt.replace(line, '')
-        txtFile.close
-        txtFile.open(txtFile, 'w')
-        txtFile.write(txt)
-        txtFile.close
+        srcFilename = r['name'] + '.txt'
+        srcFile = open(srcFilename, 'r')
+        src = []
+        for line in srcFile:
+            src.append(line.strip('\n')) 
+        for dep in depFile:
+            dep = dep.strip('\n')
+            try:
+                src.remove(dep)
+            except: pass
+            print('Removing deprecation: ' + dep)
+
+        srcTxt = '\n'.join(src)
+        srcFile.close
+        srcFile = open(srcFilename, 'w')
+        srcFile.write(srcTxt)
+        srcFile.close
+
     depFile.close
 
     print('Done!')
@@ -78,8 +86,13 @@ def scrapeDeps():
 # Generate main syntax file
 def generateSyntax():
     syntaxFile = open('plug-syntax.txt', 'w')
-    syntaxTxt  = manualFile.read()
 
+    # Simple types will be manual
+    # LSL_Manual.txt also forms the main template and holds the pain in the
+    # butt regex stuff and vim syntax references
+    manualFile    = open('LSL_Manual.txt', 'r')
+    manualTxt     = manualFile.read()
+    manualFile.close
     functionsFile = open('LSL_Functions.txt', 'r')
     functionsTxt  = functionsFile.read()
     functionsTxt  = functionsTxt.replace('\n', '\n\ ')
@@ -97,6 +110,7 @@ def generateSyntax():
     deprecatedTxt  = deprecatedTxt.replace('\n', '\n\ ')
     deprecatedFile.close
 
+    syntaxTxt = manualTxt 
     syntaxTxt = syntaxTxt.replace('*FUNCTIONS*', functionsTxt)
     syntaxTxt = syntaxTxt.replace('*EVENTS*', eventsTxt)
     syntaxTxt = syntaxTxt.replace('*CONSTANTS*', constantsTxt)
@@ -113,8 +127,6 @@ if __name__ == "__main__":
 
     scrapeDeps()
 
-    # Simple types will be manual
-    manualFile = open('LSL_Manual.txt', 'r')
 
     # Create directories and cp plug-* files to proper files and locations 
     for r in conf['structure']:
@@ -123,3 +135,5 @@ if __name__ == "__main__":
         pass
 
     generateSyntax()
+
+    print('All done!  Enjoy your day!')

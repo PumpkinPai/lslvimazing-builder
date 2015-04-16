@@ -32,7 +32,6 @@ syn keyword lslFunction
 \ llClearLinkMedia
 \ llClearPrimMedia
 \ llCloseRemoteDataChannel
-\ llCloud
 \ llCollisionFilter
 \ llCollisionSound
 \ llCollisionSprite
@@ -193,7 +192,6 @@ syn keyword lslFunction
 \ llGiveInventory
 \ llGiveInventoryList
 \ llGiveMoney
-\ llGodLikeRezObject
 \ llGround
 \ llGroundContour
 \ llGroundNormal
@@ -203,7 +201,6 @@ syn keyword lslFunction
 \ llHTTPResponse
 \ llInsertString
 \ llInstantMessage
-\ \n
 \ llIntegerToBase64
 \ llJson2List
 \ llJsonGetValue
@@ -239,10 +236,6 @@ syn keyword lslFunction
 \ llLoopSound
 \ llLoopSoundMaster
 \ llLoopSoundSlave
-\ llMakeExplosion
-\ llMakeFire
-\ llMakeFountain
-\ llMakeSmoke
 \ llManageEstateAccess
 \ llMapDestination
 \ llMatchGroup
@@ -267,21 +260,16 @@ syn keyword lslFunction
 \ llPatrolPoints
 \ llPlaySound
 \ llPlaySoundSlave
-\ llPointAt
 \ llPow
 \ llPreloadSound
 \ llPursue
 \ llPushObject
 \ llReadKeyValue
-\ llRefreshPrimURL
 \ llRegionSay
 \ llRegionSayTo
-\ llReleaseCamera
 \ llReleaseControls
 \ llReleaseURL
 \ llRemoteDataReply
-\ llRemoteDataSetRegion
-\ llRemoteLoadScript
 \ llRemoteLoadScriptPin
 \ llRemoveFromLandBanList
 \ llRemoveFromLandPassList
@@ -343,7 +331,6 @@ syn keyword lslFunction
 \ llSetForce
 \ llSetForceAndTorque
 \ llSetHoverHeight
-\ llSetInventoryPermMask
 \ llSetKeyframedMotion
 \ llSetLinkAlpha
 \ llSetLinkColor
@@ -354,14 +341,12 @@ syn keyword lslFunction
 \ llSetMemoryLimit
 \ llSetObjectDesc
 \ llSetObjectName
-\ llSetObjectPermMask
 \ llSetParcelMusicURL
 \ llSetPayPrice
 \ llSetPhysicsMaterial
 \ llSetPos
 \ llSetPrimitiveParams
 \ llSetPrimMediaParams
-\ llSetPrimURL
 \ llSetRegionPos
 \ llSetRemoteScriptAccessPin
 \ llSetRot
@@ -389,21 +374,17 @@ syn keyword lslFunction
 \ llSin
 \ llSitTarget
 \ llSleep
-\ llSound
-\ llSoundPreload
 \ llSqrt
 \ llStartAnimation
 \ llStopAnimation
 \ llStopHover
 \ llStopLookAt
 \ llStopMoveToTarget
-\ llStopPointAt
 \ llStopSound
 \ llStringLength
 \ llStringToBase64
 \ llStringTrim
 \ llSubStringIndex
-\ llTakeCamera
 \ llTakeControls
 \ llTan
 \ llTarget
@@ -431,8 +412,6 @@ syn keyword lslFunction
 \ llWhisper
 \ llWind
 \ llXorBase64
-\ llXorBase64Strings
-\ llXorBase64StringsCorrect
 
 # EVENTS #
 syn keyword lslEvents
@@ -475,8 +454,6 @@ syn keyword lslEvents
 \ touch_end
 \ touch_start
 \ transaction_result
-\ \n
-\ (previous_200)_(next_200)\n
 
 # CONSTANTS #
 syn keyword lslConstant
@@ -680,7 +657,6 @@ syn keyword lslConstant
 \ KFM_PING_PONG
 \ KFM_REVERSE
 \ KFM_ROTATION
-\ \n
 \ KFM_TRANSLATION
 \ LAND_LEVEL
 \ LAND_LOWER
@@ -711,6 +687,7 @@ syn keyword lslConstant
 \ MASK_OWNER
 \ NULL_KEY
 \ OBJECT_ATTACHED_POINT
+\ OBJECT_BODY_SHAPE_TYPE
 \ OBJECT_CHARACTER_TIME
 \ OBJECT_CREATOR
 \ OBJECT_DESC
@@ -719,6 +696,7 @@ syn keyword lslConstant
 \ OBJECT_OWNER
 \ OBJECT_PATHFINDING_TYPE
 \ OBJECT_PHANTOM
+\ OBJECT_HOVER_HEIGHT
 \ OBJECT_PHYSICS
 \ OBJECT_PHYSICS_COST
 \ OBJECT_POS
