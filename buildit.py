@@ -60,6 +60,19 @@ def scrapeDeps():
     url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
     spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFile)
     spidey.cleanResults(depFile, ['firstLower'], [False], [False])
+    # Remove deps from captured result files
+    depsTxt = open(depFile, 'r')
+    for r in conf['scraper']['queries']:
+        txtFile = r['name'] + '.txt'
+        txt = open(txtFile, 'r')
+        for line in depsTxt:
+            txt = txt.replace(line, '')
+        txtFile.close
+        txtFile.open(txtFile, 'w')
+        txtFile.write(txt)
+        txtFile.close
+    depFile.close
+
     print('Done!')
 
 # Generate main syntax file
