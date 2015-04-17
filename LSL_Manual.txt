@@ -1,5 +1,27 @@
 " syntax/lsl.vim
-" main LSL Syntax file for VIM
+" LSL Syntax File
+" Language: lsl
+" Maintainer: PumpkinPai <pumpkin@luvotron.com>
+" Last update: *LASTUPDATE* todo
+" Credits:  
+"         Builder's Brewery maintains a set of lsl syntax files in 
+"               https://github.com/buildersbrewery/lsl-for-vim
+"           and https://github.com/buildersbrewery/linden-scripting-language
+"         The idea for this plugin was ultimately from those projects
+
+
+if version < 600
+  syntax clear
+elseif exists("b:current_syntax")
+  finish
+endif
+
+" nocompatible mode for lines with backslashes 
+let s:cpo_save = &cpo
+set cpo&vim
+
+
+
 
 " COMMENTS "
 syntax keyword lslTodo 
@@ -72,7 +94,7 @@ syn region lslList display
 \ start='\[' end='\]' fold transparent contains=ALL
 
 syn match lslState display
-\ /\b(state).\|(default)\b/ contains=lslLabel
+\ /\b(state)[' ']\w*/ contains=lslLabel
 
 syn region lslComment display
 \ start='\/\/' end='$' contains=lslTodo,@Spell
@@ -106,3 +128,14 @@ highlight default link lslStringEscaped Special
 highlight default link lslNumber        Number
 highlight default link lslKey           Special
 highlight default link lslState         Label
+
+highlight default link lslParen         Special 
+highlight default link lslBlock         Special 
+highlight default link lslList          Special 
+
+
+let b:current_syntax = "lsl"
+
+let &cpo = s:cpo_save
+unlet s:cpo_save
+
