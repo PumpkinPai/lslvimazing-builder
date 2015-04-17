@@ -18,3 +18,6 @@ llStopPointAt
 llTakeCamera
 llXorBase64Strings
 llXorBase64StringsCorrect
+llGetPizza
+PRIM MATERIAL LIGHT
+STATUS CAST SHADOWS

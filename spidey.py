@@ -94,7 +94,8 @@ def cleanResults(dirtyFilename, specialRules, replace, ignoreList):
             cleanList.append(txt)
 
     # Round 2, replicants and ignorables
-    resultList = cleanList
+    if cleanList[1]:
+        resultList = cleanList
     cleanList = []
     for txt in resultList:
         # Assume they took a bath
@@ -111,21 +112,22 @@ def cleanResults(dirtyFilename, specialRules, replace, ignoreList):
             # print('Removed: ' + txt + ' because it was' + dirty) 
 
     # Round 3, replacements
-    if replace[0]:
+    if cleanList[1]:
         resultList = cleanList
+    if replace[0]:
         cleanList = []
         for txt in resultList:
             txt = txt.replace(replace[0], replace[1])
             cleanList.append(txt)
 
     readFile.close
-    resultTxt = '\n'.join(cleanList)
+    resultTxt = '\n'.join(cleanList) + '\n'
     writeFile = open(dirtyFilename, 'w')
     writeFile.write(resultTxt)
     writeFile.close
-    
+
     # return number, first and last
-    return (str(len(resultList)), resultList[0], resultList[-1])
+    return (str(len(resultList)), cleanList[0], cleanList[-1])
 
 
 if __name__ == "__main__":

@@ -1,0 +1,3 @@
+" ftplugin/lsl.vim
+
+setlocal completefunc=syntaxcomplete#Complete

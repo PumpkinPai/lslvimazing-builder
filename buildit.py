@@ -45,20 +45,53 @@ def scrapeMain():
 def scrapeDeps():
     print('Sorting deprecations...')
     depFilename = 'LSL_Deprecated.txt'
+    depFilename2 = 'LSL_Deprecated2.txt'
     try:
-        pass
-        # os.remove(depFilename)
+         os.remove(depFilename)
+         os.remove(depFilename2)
     except:
         pass
+    # First search, on LSL_Functions page
     searchTerm = '<s>'
     pageBegin = 'title="LlAbs"'
     pageEnd = 'id="footnote_1"'
     delim = ['>','<']
+    ignore = ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
     url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
     spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFilename)
-    spidey.cleanResults(depFilename, ['firstLower'], [False], [False])
+    spidey.cleanResults(depFilename, ['firstLower'], [False], ignore)
+    
+    # Second search, on the ill-maintained LSL_Deprecated page
+    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Deprecated'
+    pageBegin = 'Pages in category'
+    pageEnd = 'class="printfooter"'
+    searchTerm = '<li><a href="/wiki/'
+    ignore = ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
+    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFilename2)
+    spidey.cleanResults(depFilename, [False], [' ','_'], ignore)
 
-    # Remove deps from captured result files
+    # Merge the two dep files
+    depFile1 = open(depFilename, 'r')
+    depFile2 = open(depFilename2, 'r')
+    deps1 = depFile1.read().splitlines()
+    print(str(deps1))
+    deps2 = []
+    for line in depFile2:
+        line = line.strip('\n')
+        if line[0:2] == 'Ll':
+            line = 'll' + line[2:]
+        if not line in deps1:
+            if line != '\\n':
+                deps2.append(line.strip('\n'))
+    deps2Txt = '\n'.join(deps2)
+    depFile1.close
+    depFile2.close
+    depFile1 = open(depFilename, 'a')
+    depFile1.write(deps2Txt)
+    depFile1.close
+
+
+    # Remove deps from captured result files case insensitively
     depFile = open(depFilename, 'r')
     for r in conf['scraper']['queries']:
         srcFilename = r['name'] + '.txt'
@@ -71,7 +104,7 @@ def scrapeDeps():
             try:
                 src.remove(dep)
             except: pass
-            print('Removing deprecation: ' + dep)
+            print('Removing deprecation from' + srcFilename + ': ' + dep)
 
         srcTxt = '\n'.join(src)
         srcFile.close

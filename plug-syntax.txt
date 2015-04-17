@@ -1,8 +1,15 @@
-# LSL Syntax file for VIM
+" syntax/lsl.vim
+" main LSL Syntax file for VIM
 
+" COMMENTS "
+syntax keyword lslTodo 
+\ todo Todo TODO fixme Fixme FIXME bug Bug BUG xxx XXX 
 
+" DEBUGGING "
+syntax keyword lslDebug
+debug Debug DEBUG temp Temp TEMP
 
-# FUNCTIONS #
+" FUNCTIONS "
 syn keyword lslFunction 
 \ llAbs
 \ llAcos
@@ -413,7 +420,7 @@ syn keyword lslFunction
 \ llWind
 \ llXorBase64
 
-# EVENTS #
+" EVENTS "
 syn keyword lslEvents
 \ attach
 \ at_rot_target
@@ -455,7 +462,7 @@ syn keyword lslEvents
 \ touch_start
 \ transaction_result
 
-# CONSTANTS #
+" CONSTANTS "
 syn keyword lslConstant
 \ ACTIVE
 \ AGENT
@@ -1017,7 +1024,7 @@ syn keyword lslConstant
 \ ZERO_ROTATION
 \ ZERO_VECTOR
 
-# DEPRECATED #
+" DEPRECATED "
 syn keyword lslDeprecated
 \ llCloud
 \ llGodLikeRezObject
@@ -1039,18 +1046,24 @@ syn keyword lslDeprecated
 \ llTakeCamera
 \ llXorBase64Strings
 \ llXorBase64StringsCorrect
+\ llGetPizza
+\ PRIM MATERIAL LIGHT
+\ STATUS CAST SHADOWS
 
-# FLOW #
-syn keyword lslFlow
+" CONDITIONAL "
+syn keyword lslConditional
 \ if
 \ else
+
+" REPEATS "
+syn keyword lslRepeat
 \ do
 \ while
 \ for
 \ jump
 \ return
 
-# TYPES #
+" TYPES "
 syn keyword lslType
 \ key
 \ string
@@ -1060,7 +1073,11 @@ syn keyword lslType
 \ vector
 \ rotation
 
-# DISPLAYS #
+" LABELS "
+syn keyword lslLabel
+\ state default 
+
+" DISPLAYS "
 syn match lslNumber display
 \ /[0-9]/
 
@@ -1080,13 +1097,37 @@ syn region lslList display
 \ start='\[' end='\]' fold transparent contains=ALL
 
 syn match lslState display
-\ /\b(state).\|(default)\b/
+\ /\b(state).\|(default)\b/ contains=lslLabel
 
 syn region lslComment display
-\ start='\/\/' end='$' contains=lslCommentTodo,@Spell
+\ start='\/\/' end='$' contains=lslTodo,@Spell
 
 syn region lslCommentMulti display
-\ start='\/\*' end='\*\/' contains=lslCommentTodo,@Spell
+\ start='\/\*' end='\*\/' contains=lslTodo,@Spell
 
 syn match lslOperator display
 \ /[!%<>=*\+\-\/\|&\?\^~]/
+
+
+" HIGHLIGHTING "
+highlight default link lslTodo          Todo
+highlight default link lslDebug         Debug
+highlight default link lslComment       Comment
+highlight default link lslCommentMulti  Comment
+
+highlight default link lslFunction      Function
+highlight default link lslEvent         Event 
+highlight default link lslConstant      Constant 
+highlight default link lslDeprecated    Error
+
+highlight default link lslType          Type 
+highlight default link lslConditional   Conditional
+highlight default link lslRepeat        Repeat
+highlight default link lslLabel         Label 
+highlight default link lslOperator      Operator
+
+highlight default link lslString        String
+highlight default link lslStringEscaped Special
+highlight default link lslNumber        Number
+highlight default link lslKey           Special
+highlight default link lslState         Label
