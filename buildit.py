@@ -13,6 +13,7 @@
 import spidey
 import os
 import yaml
+from datetime import date
 
 
 def getConf():
@@ -74,7 +75,7 @@ def scrapeDeps():
     depFile1 = open(depFilename, 'r')
     depFile2 = open(depFilename2, 'r')
     deps1 = depFile1.read().splitlines()
-    print(str(deps1))
+    # debug- print(str(deps1))
     deps2 = []
     for line in depFile2:
         line = line.strip('\n')
@@ -148,9 +149,32 @@ def generateSyntax():
     syntaxTxt = syntaxTxt.replace('*EVENTS*', eventsTxt)
     syntaxTxt = syntaxTxt.replace('*CONSTANTS*', constantsTxt)
     syntaxTxt = syntaxTxt.replace('*DEPRECATED*', deprecatedTxt)
+    syntaxTxt = syntaxTxt.replace('*LASTUPDATE*', str(date.today()))
+    # todo- insert last update into README.md file
 
     syntaxFile.write(syntaxTxt)
     syntaxFile.close
+
+# Create directories and cp plug-* files to proper files and locations 
+def stuffFiles():
+    for r in conf['structure']:
+        directory = r['directory']
+        filename    = r['filename']
+        source      = r['source']
+
+        print('Stuffing: ' + directory + filename)
+        try:
+            os.mkdir(directory)
+        except:
+            pass
+        srcFile   = open(source, 'r')
+        dstFile   = open(directory+filename, 'w+')
+        srcTxt = srcFile.read()
+        dstFile.write(srcTxt)
+        srcFile.close
+        dstFile.close
+
+
 
 if __name__ == "__main__":
 
@@ -160,13 +184,8 @@ if __name__ == "__main__":
 
     scrapeDeps()
 
-
-    # Create directories and cp plug-* files to proper files and locations 
-    for r in conf['structure']:
-        # todo
-        # print(r)
-        pass
-
     generateSyntax()
+
+    stuffFiles()
 
     print('All done!  Enjoy your day!')

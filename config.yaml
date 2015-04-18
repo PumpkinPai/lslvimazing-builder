@@ -7,24 +7,24 @@ editor: vim
 structure:
 - name: ftdetect  
   source: plug-ftdetect.txt
-  file: lsl.vim
-  directory: lslvimazing/ftdetect
+  filename: lsl.vim
+  directory: lslvimazing/ftdetect/
 - name: ftplugin
-  contents: plug-ftplugin.txt
-  file: lsl.vim
-  directory: lslvimazing/ftplugin
+  source: plug-ftplugin.txt
+  filename: lsl.vim
+  directory: lslvimazing/ftplugin/
 - name: indent
-  contents: plug-indent.txt
-  file: lsl.vim
-  directory: lslvimazing/indent
+  source: plug-indent.txt
+  filename: lsl.vim
+  directory: lslvimazing/indent/
 - name: syntax
-  contents: plug-syntax.txt
-  file: lsl.vim
-  directory: lslvimazing/syntax
+  source: plug-syntax.txt
+  filename: lsl.vim
+  directory: lslvimazing/syntax/
 - name: root
-  contents: plug-README.md
-  file: README.md
-  directory: lslvimazing
+  source: plug-README.md
+  filename: README.md
+  directory: lslvimazing/
 
 scraper:
   url: 'http://wiki.secondlife.com/w/index.php?title=Category:'
