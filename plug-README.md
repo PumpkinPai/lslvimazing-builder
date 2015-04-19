@@ -1,2 +1,1 @@
 Readme!
-Last update: *LASTUPDATE*

@@ -34,15 +34,15 @@ scraper:
   delim: ['>','<']
   ignore: ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
   queries:
-  - name: 'LSL_Functions'
+  - name: 'LSL_FUNCTIONS'
     page: 'LSL_Functions&pagefrom='
     rules: ['firstLower']
     replace: [False]
-  - name: 'LSL_Events'
+  - name: 'LSL_EVENTS'
     page: 'LSL_Events&pagefrom='
     rules: ['lower']
     replace: [' ','_']
-  - name: 'LSL_Constants'
+  - name: 'LSL_CONSTANTS'
     page: 'LSL_Constants&pagefrom='
     rules: ['upper']
     replace: [' ','_']

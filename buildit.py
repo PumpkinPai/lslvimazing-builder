@@ -42,28 +42,28 @@ def scrapeMain():
         print('Captured ' + str(total) + ' results from ' + first + ' to ' + last)
         print('Done!')
 
-# Deprecated Functions
+# DEPRECATED FUNCTIONS
 def scrapeDeps():
     print('Sorting deprecations...')
-    depFilename = 'LSL_Deprecated.txt'
-    depFilename2 = 'LSL_Deprecated2.txt'
+    depFilename = 'LSL_DEPRECATED.txt'
+    depFilename2 = 'LSL_DEPRECATED2.txt'
     try:
          os.remove(depFilename)
          os.remove(depFilename2)
     except:
         pass
-    # First search, on LSL_Functions page
+    # First search, on LSL_FUNCTIONS page
     searchTerm = '<s>'
     pageBegin = 'title="LlAbs"'
     pageEnd = 'id="footnote_1"'
     delim = ['>','<']
     ignore = ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
-    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
+    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_FUNCTIONS'
     spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFilename)
     spidey.cleanResults(depFilename, ['firstLower'], [False], ignore)
     
-    # Second search, on the ill-maintained LSL_Deprecated page
-    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Deprecated'
+    # Second search, on the ill-maintained LSL_DEPRECATED page
+    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_DEPRECATED'
     pageBegin = 'Pages in category'
     pageEnd = 'class="printfooter"'
     searchTerm = '<li><a href="/wiki/'
@@ -117,9 +117,22 @@ def scrapeDeps():
 
     print('Done!')
 
+# Search txt for stuff between delim, return list
+def getReplacements(txt, delim):
+    results = []
+    while txt: 
+        startFind   = txt.find(delim[0]) + len(delim[0])
+        endFind     = txt.find(delim[1], startFind)
+        if endFind == -1: break
+        found = txt[startFind:endFind]
+        results.append(found)
+        txt = txt[endFind + len(delim[1]):]
+        print(found)
+
+    return results
+
 # Generate main syntax file
 def generateSyntax():
-    syntaxFile = open('plug-syntax.txt', 'w')
 
     # Simple types will be manual
     # LSL_Manual.txt also forms the main template and holds the pain in the
@@ -127,32 +140,21 @@ def generateSyntax():
     manualFile    = open('LSL_Manual.txt', 'r')
     manualTxt     = manualFile.read()
     manualFile.close
-    functionsFile = open('LSL_Functions.txt', 'r')
-    functionsTxt  = functionsFile.read()
-    functionsTxt  = functionsTxt.replace('\n', '\n\ ')
-    functionsFile.close
-    eventsFile    = open('LSL_Events.txt', 'r')
-    eventsTxt     = eventsFile.read()
-    eventsTxt     = eventsTxt.replace('\n', '\n\ ')
-    eventsFile.close
-    constantsFile = open('LSL_Constants.txt', 'r')
-    constantsTxt  = constantsFile.read()
-    constantsTxt  = constantsTxt.replace('\n', '\n\ ')
-    constantsFile.close
-    deprecatedFile = open('LSL_Deprecated.txt', 'r')
-    deprecatedTxt  = deprecatedFile.read()
-    deprecatedTxt  = deprecatedTxt.replace('\n', '\n\ ')
-    deprecatedFile.close
 
-    syntaxTxt = manualTxt 
-    syntaxTxt = syntaxTxt.replace('*FUNCTIONS*', functionsTxt)
-    syntaxTxt = syntaxTxt.replace('*EVENTS*', eventsTxt)
-    syntaxTxt = syntaxTxt.replace('*CONSTANTS*', constantsTxt)
-    syntaxTxt = syntaxTxt.replace('*DEPRECATED*', deprecatedTxt)
-    syntaxTxt = syntaxTxt.replace('*LASTUPDATE*', str(date.today()))
+    replacements = getReplacements(manualTxt, ['!!', '!!'])
+
+    for replacement in replacements:
+        srcFile = open(replacement + '.txt', 'r')
+        srcTxt  = srcFile.read()
+        srcFile.close
+        srcTxt  = srctxt.replace('\n', '\n\ ')
+        manualTxt = manualTxt.replace(replacement, srcTxt)
+
+    manualTxt = manualTxt.replace('LASTUPDATE', str(date.today()))
     # todo- insert last update into README.md file
 
-    syntaxFile.write(syntaxTxt)
+    syntaxFile = open('plug-syntax.txt', 'w')
+    syntaxFile.write(manualTxt)
     syntaxFile.close
 
 # Create directories and cp plug-* files to proper files and locations 
@@ -173,7 +175,6 @@ def stuffFiles():
         dstFile.write(srcTxt)
         srcFile.close
         dstFile.close
-
 
 
 if __name__ == "__main__":

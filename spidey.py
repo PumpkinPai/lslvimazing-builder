@@ -29,7 +29,7 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
             html = str(response.read())
 
             # PAGEBEGIN TO PAGEEND
-            # Make it just the nectar within pageBegin and pageEnd
+            # Make it just the sweet nectar within pageBegin and pageEnd
             startHtml = html.find(pageBegin)
             endHtml   = html.find(pageEnd)
             html = html[startHtml:endHtml]
