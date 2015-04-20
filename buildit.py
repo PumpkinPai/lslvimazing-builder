@@ -58,12 +58,12 @@ def scrapeDeps():
     pageEnd = 'id="footnote_1"'
     delim = ['>','<']
     ignore = ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
-    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_FUNCTIONS'
+    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
     spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFilename)
     spidey.cleanResults(depFilename, ['firstLower'], [False], ignore)
     
     # Second search, on the ill-maintained LSL_DEPRECATED page
-    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_DEPRECATED'
+    url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Deprecated'
     pageBegin = 'Pages in category'
     pageEnd = 'class="printfooter"'
     searchTerm = '<li><a href="/wiki/'
@@ -147,11 +147,19 @@ def generateSyntax():
         srcFile = open(replacement + '.txt', 'r')
         srcTxt  = srcFile.read()
         srcFile.close
-        srcTxt  = srctxt.replace('\n', '\n\ ')
+        srcTxt  = srcTxt.replace('\n', '\n\ ')
         manualTxt = manualTxt.replace(replacement, srcTxt)
 
     manualTxt = manualTxt.replace('LASTUPDATE', str(date.today()))
     # todo- insert last update into README.md file
+    readmeFile = open('plug-README.md', 'r')
+    readmeTxt = readmeFile.read()
+    readmeTxt = readmeTxt.replace('LASTUPDATE', str(date.today()))
+    readmeFile.close
+    readmeFile = open('plug-README.md', 'w')
+    readmeFile.write(readmeTxt)
+    readmeFile.close
+
 
     syntaxFile = open('plug-syntax.txt', 'w')
     syntaxFile.write(manualTxt)

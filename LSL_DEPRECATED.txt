@@ -1,0 +1,23 @@
+llCloud
+llGodLikeRezObject
+llMakeExplosion
+llMakeFire
+llMakeFountain
+llMakeSmoke
+llPointAt
+llRefreshPrimURL
+llReleaseCamera
+llRemoteDataSetRegion
+llRemoteLoadScript
+llSetInventoryPermMask
+llSetObjectPermMask
+llSetPrimURL
+llSound
+llSoundPreload
+llStopPointAt
+llTakeCamera
+llXorBase64Strings
+llXorBase64StringsCorrect
+llGetPizza
+PRIM MATERIAL LIGHT
+STATUS CAST SHADOWS

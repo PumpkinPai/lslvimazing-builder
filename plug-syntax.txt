@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-04-18
+" Last update: 2015-04-19
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -33,7 +33,7 @@ syntax keyword lslDebug
 
 " FUNCTIONS "
 syn keyword lslFunction
-\ llAbs
+\ !!llAbs
 \ llAcos
 \ llAddToLandBanList
 \ llAddToLandPassList
@@ -440,11 +440,11 @@ syn keyword lslFunction
 \ llWater
 \ llWhisper
 \ llWind
-\ llXorBase64
+\ llXorBase64!!
 
 " EVENTS "
 syn keyword lslEvent
-\ attach
+\ !!attach
 \ at_rot_target
 \ at_target
 \ changed
@@ -482,11 +482,11 @@ syn keyword lslEvent
 \ touch
 \ touch_end
 \ touch_start
-\ transaction_result
+\ transaction_result!!
 
 " CONSTANTS "
 syn keyword lslConstant
-\ ACTIVE
+\ !!ACTIVE
 \ AGENT
 \ AGENT_ALWAYS_RUN
 \ AGENT_ATTACHMENTS
@@ -1044,11 +1044,11 @@ syn keyword lslConstant
 \ VEHICLE_VERTICAL_ATTRACTION_TIMESCALE
 \ VERTICAL
 \ ZERO_ROTATION
-\ ZERO_VECTOR
+\ ZERO_VECTOR!!
 
 " DEPRECATED "
 syn keyword lslDeprecated
-\ llCloud
+\ !!llCloud
 \ llGodLikeRezObject
 \ llMakeExplosion
 \ llMakeFire
@@ -1070,7 +1070,7 @@ syn keyword lslDeprecated
 \ llXorBase64StringsCorrect
 \ llGetPizza
 \ PRIM MATERIAL LIGHT
-\ STATUS CAST SHADOWS
+\ STATUS CAST SHADOWS!!
 
 " CONDITIONAL "
 syn keyword lslConditional
