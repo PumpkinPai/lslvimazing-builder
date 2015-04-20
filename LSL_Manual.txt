@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: !!LASTUPDATE!!
+" Last update: LASTUPDATE
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -33,19 +33,19 @@ syntax keyword lslDebug
 
 " FUNCTIONS "
 syn keyword lslFunction
-\ !!FUNCTIONS!!
+\ !!LSL_FUNCTIONS!!
 
 " EVENTS "
 syn keyword lslEvent
-\ !!EVENTS!!
+\ !!LSL_EVENTS!!
 
 " CONSTANTS "
 syn keyword lslConstant
-\ !!CONSTANTS!!
+\ !!LSL_CONSTANTS!!
 
 " DEPRECATED "
 syn keyword lslDeprecated
-\ !!DEPRECATED!!
+\ !!LSL_DEPRECATED!!
 
 " CONDITIONAL "
 syn keyword lslConditional
