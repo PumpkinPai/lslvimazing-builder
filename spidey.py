@@ -7,7 +7,7 @@ import urllib.request
 import os
 
 # Crawl url, look for searchTerm, grab thing within delim, put it in txtFile
-def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
+def crawl(url, pageBegin, pageEnd, searchTerm, delim, squash, txtFile):
     # temp- we now have decent files to play with
     # return ('x', 'x')
 
@@ -33,6 +33,12 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, txtFile):
             startHtml = html.find(pageBegin)
             endHtml   = html.find(pageEnd)
             html = html[startHtml:endHtml]
+
+            # SQUASH
+            # remove problematic tags and strings
+            if squash:
+                for squish in squash:
+                    html = html.replace(squish, '')
 
             # MULTI
             # If the category spans multiple pages, cry
@@ -102,6 +108,7 @@ def cleanResults(dirtyFilename, specialRules, replace, ignoreList):
         dirty = ''
         if txt in cleanList: 
             # She's a replicant
+            print(str(cleanList.index(txt)) + ' : ' + txt)
             dirty = ' a replicant'   
         if txt.lower() in ignoreList: 
             dirty = ' in the ignoreList' 

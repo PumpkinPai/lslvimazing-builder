@@ -33,6 +33,7 @@ scraper:
   searchTerm: '<li><a href="/wiki/'
   delim: ['>','<']
   ignore: ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
+  squash: ['<span class="redirect-in-category">']
   queries:
   - name: 'LSL_FUNCTIONS'
     page: 'LSL_Functions&pagefrom='

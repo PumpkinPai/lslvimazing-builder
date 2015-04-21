@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-04-19
+" Last update: 2015-04-21
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -33,7 +33,7 @@ syntax keyword lslDebug
 
 " FUNCTIONS "
 syn keyword lslFunction
-\ !!llAbs
+\ llAbs
 \ llAcos
 \ llAddToLandBanList
 \ llAddToLandPassList
@@ -150,6 +150,7 @@ syn keyword lslFunction
 \ llGetLinkName
 \ llGetLinkNumber
 \ llGetLinkNumberOfSides
+\ llGetLinkPrimitiveParams
 \ llGetListEntryType
 \ llGetListLength
 \ llGetLocalPos
@@ -238,6 +239,7 @@ syn keyword lslFunction
 \ llKey2Name
 \ llKeyCountKeyValue
 \ llKeysKeyValue
+\ llLinkParticleSystem
 \ llLinkSitTarget
 \ llList2CSV
 \ llList2Float
@@ -374,6 +376,8 @@ syn keyword lslFunction
 \ llSetPayPrice
 \ llSetPhysicsMaterial
 \ llSetPos
+\ llSetLinkPrimitiveParams
+\ llSetLinkPrimitiveParamsFast
 \ llSetPrimitiveParams
 \ llSetPrimMediaParams
 \ llSetRegionPos
@@ -440,11 +444,11 @@ syn keyword lslFunction
 \ llWater
 \ llWhisper
 \ llWind
-\ llXorBase64!!
+\ llXorBase64
 
 " EVENTS "
 syn keyword lslEvent
-\ !!attach
+\ attach
 \ at_rot_target
 \ at_target
 \ changed
@@ -482,11 +486,11 @@ syn keyword lslEvent
 \ touch
 \ touch_end
 \ touch_start
-\ transaction_result!!
+\ transaction_result
 
 " CONSTANTS "
 syn keyword lslConstant
-\ !!ACTIVE
+\ ACTIVE
 \ AGENT
 \ AGENT_ALWAYS_RUN
 \ AGENT_ATTACHMENTS
@@ -721,11 +725,11 @@ syn keyword lslConstant
 \ OBJECT_CREATOR
 \ OBJECT_DESC
 \ OBJECT_GROUP
+\ OBJECT_HOVER_HEIGHT
 \ OBJECT_NAME
 \ OBJECT_OWNER
 \ OBJECT_PATHFINDING_TYPE
 \ OBJECT_PHANTOM
-\ OBJECT_HOVER_HEIGHT
 \ OBJECT_PHYSICS
 \ OBJECT_PHYSICS_COST
 \ OBJECT_POS
@@ -984,6 +988,7 @@ syn keyword lslConstant
 \ STRING_TRIM
 \ STRING_TRIM_HEAD
 \ STRING_TRIM_TAIL
+\ TEXTURE_DEFAULT
 \ TEXTURE_BLANK
 \ TEXTURE_MEDIA
 \ TEXTURE_PLYWOOD
@@ -1044,11 +1049,11 @@ syn keyword lslConstant
 \ VEHICLE_VERTICAL_ATTRACTION_TIMESCALE
 \ VERTICAL
 \ ZERO_ROTATION
-\ ZERO_VECTOR!!
+\ ZERO_VECTOR
 
 " DEPRECATED "
 syn keyword lslDeprecated
-\ !!llCloud
+\ llCloud
 \ llGodLikeRezObject
 \ llMakeExplosion
 \ llMakeFire
@@ -1070,7 +1075,7 @@ syn keyword lslDeprecated
 \ llXorBase64StringsCorrect
 \ llGetPizza
 \ PRIM MATERIAL LIGHT
-\ STATUS CAST SHADOWS!!
+\ STATUS CAST SHADOWS
 
 " CONDITIONAL "
 syn keyword lslConditional

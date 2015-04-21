@@ -35,7 +35,8 @@ def scrapeMain():
         end     = conf['scraper']['pageEnd']
         search  = conf['scraper']['searchTerm']
         delim   = conf['scraper']['delim']
-        founds, pages = spidey.crawl(url, begin, end, search, delim, txtFilename)
+        squash  = conf['scraper']['squash']
+        founds, pages = spidey.crawl(url, begin, end, search, delim, squash, txtFilename)
         print('Found: ' + str(founds) + ' results on ' + str(pages) + ' pages')
         print('Cleaning ' + txtFilename)
         total, first, last = spidey.cleanResults(txtFilename, rules, replace, ignore)
@@ -59,7 +60,7 @@ def scrapeDeps():
     delim = ['>','<']
     ignore = ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
     url = 'http://wiki.secondlife.com/w/index.php?title=Category:LSL_Functions'
-    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFilename)
+    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, [], depFilename)
     spidey.cleanResults(depFilename, ['firstLower'], [False], ignore)
     
     # Second search, on the ill-maintained LSL_DEPRECATED page
@@ -68,7 +69,7 @@ def scrapeDeps():
     pageEnd = 'class="printfooter"'
     searchTerm = '<li><a href="/wiki/'
     ignore = ['\n', '(', '(previous 200) (', 'next 200', 'previous 200', '(previous 200) (next 200)\n']
-    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, depFilename2)
+    spidey.crawl(url, pageBegin, pageEnd, searchTerm, delim, [], depFilename2)
     spidey.cleanResults(depFilename, [False], [' ','_'], ignore)
 
     # Merge the two dep files
@@ -140,15 +141,16 @@ def generateSyntax():
     manualFile    = open('LSL_Manual.txt', 'r')
     manualTxt     = manualFile.read()
     manualFile.close
+    delim = ['!!', '!!']
 
-    replacements = getReplacements(manualTxt, ['!!', '!!'])
+    replacements = getReplacements(manualTxt, delim)
 
     for replacement in replacements:
         srcFile = open(replacement + '.txt', 'r')
         srcTxt  = srcFile.read()
         srcFile.close
         srcTxt  = srcTxt.replace('\n', '\n\ ')
-        manualTxt = manualTxt.replace(replacement, srcTxt)
+        manualTxt = manualTxt.replace(delim[0] + replacement + delim[1], srcTxt)
 
     manualTxt = manualTxt.replace('LASTUPDATE', str(date.today()))
     # todo- insert last update into README.md file
