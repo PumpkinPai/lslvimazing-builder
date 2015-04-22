@@ -64,7 +64,7 @@ syn keyword lslRepeat
 syn keyword lslType
 \ key
 \ string
-\ ist
+\ list
 \ integer
 \ float
 \ vector
