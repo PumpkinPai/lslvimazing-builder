@@ -19,6 +19,7 @@ from datetime import date
 def getConf():
     confFile = open('config.yaml', 'r')
     conf = yaml.load(confFile)
+    confFile.close
     return conf
 
 # Main Scrapes
