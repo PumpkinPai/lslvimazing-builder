@@ -103,8 +103,11 @@ syn region lslCommentMulti display
 \ start='\/\*' end='\*\/' contains=lslTodo,@Spell
 
 syn match lslOperator display
-\ /[!%<>=*\+\-\/\|&\?\^~]/
+\ /[!%<>=*\+\-\|&\?\^~]/
 
+" todo- make this work!
+syn match lslOperator display
+\ /(?>!)\/(?!\/)/
 
 " HIGHLIGHTING "
 highlight default link lslTodo          Todo
