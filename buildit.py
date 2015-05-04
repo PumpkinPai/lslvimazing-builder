@@ -170,6 +170,7 @@ def generateSyntax():
 
 # Create directories and cp plug-* files to proper files and locations 
 def stuffFiles():
+    # todo- change dir up one level so it can be pushed directly to git
     for r in conf['structure']:
         directory = r['directory']
         filename    = r['filename']
