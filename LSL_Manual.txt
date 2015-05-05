@@ -81,9 +81,8 @@ syn match lslNumber display
 syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
 
-" bug-
 syn match lslStringEscape display
-\ /\\t|\\n/
+\ /\\t\|\\n/
 
 syn region lslBlock display
 \ start='{' end='}' fold transparent contains=ALL
