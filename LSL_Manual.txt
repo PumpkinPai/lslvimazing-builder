@@ -81,6 +81,7 @@ syn match lslNumber display
 syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
 
+" bug-
 syn match lslStringEscape display
 \ /\\t|\\n/
 
@@ -105,9 +106,8 @@ syn region lslCommentMulti display
 syn match lslOperator display
 \ /[!%<>=*\+\-\|&\?\^~]/
 
-" todo- make this work!
 syn match lslOperator display
-\ /(?>!)\/(?!\/)/
+\ /\/\(\/\)\@!/
 
 " HIGHLIGHTING "
 highlight default link lslTodo          Todo

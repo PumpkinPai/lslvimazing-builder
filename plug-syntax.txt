@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-05-03
+" Last update: 2015-05-04
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -1112,6 +1112,7 @@ syn match lslNumber display
 syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
 
+" bug-
 syn match lslStringEscape display
 \ /\\t|\\n/
 
@@ -1136,9 +1137,8 @@ syn region lslCommentMulti display
 syn match lslOperator display
 \ /[!%<>=*\+\-\|&\?\^~]/
 
-" todo- make this work!
 syn match lslOperator display
-\ /(?>!)\/(?!\/)/
+\ /\/\(\/\)\@!/
 
 " HIGHLIGHTING "
 highlight default link lslTodo          Todo
