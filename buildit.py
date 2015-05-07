@@ -11,7 +11,7 @@
 ##############################################################################
 
 import spidey
-import os
+import os, subprocess
 import yaml
 from datetime import date
 
@@ -201,4 +201,17 @@ if __name__ == "__main__":
 
     stuffFiles()
 
+    print('Done building latest plugin.')
+    userResp = input('Would you like to commit changes to your repo? (y/n)')
+    if str(userResp).lower()[0] == 'y':
+        try:
+            curDir = os.getcwd()
+            lslvimDir = curDir + '/lslvimazing'
+            os.chdir(lslvimDir)
+            subprocess.call('git add .', shell=True)
+            subprocess.call('git commit -m "Update auto-commit"', shell=True)
+            subprocess.call('git push origin master', shell=True)
+        except Exception as e:
+            print(str(e))
+    
     print('All done!  Enjoy your day!')
