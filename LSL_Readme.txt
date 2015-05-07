@@ -1,5 +1,5 @@
 # lslvimazing
-Last update: 2015-05-07
+Last update: LASTUPDATE
 LSL-VIM Syntax Plugin
 
 ### Uses the latest and greatest versions of LSL functions, constants and events straight from the official LSL Wiki

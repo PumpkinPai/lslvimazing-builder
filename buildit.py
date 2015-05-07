@@ -155,10 +155,10 @@ def generateSyntax():
 
     manualTxt = manualTxt.replace('LASTUPDATE', str(date.today()))
     # todo- insert last update into README.md file
-    readmeFile = open('plug-README.md', 'r')
-    readmeTxt = readmeFile.read()
+    readmeSrc = open('LSL_Readme.txt', 'r')
+    readmeTxt = readmeSrc.read()
     readmeTxt = readmeTxt.replace('LASTUPDATE', str(date.today()))
-    readmeFile.close
+    readmeSrc.close
     readmeFile = open('plug-README.md', 'w')
     readmeFile.write(readmeTxt)
     readmeFile.close
