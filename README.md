@@ -10,6 +10,6 @@ You probably don't need this if you just want the LSL plugin.  I run updates eve
 **TODO**
 - [x] Make it work!
 - [ ] Add Features!
-  - [ ] Add snippet scraping
-  - [ ] Add snippet functionality with iabbrev
-  - [ ] Add option to autosave lsl files locally with decent names
+  - [ ] Add snippet scraping #4
+  - [ ] Add snippet functionality with iabbrev #5
+  - [ ] Add option to autosave lsl files locally with decent names #3
