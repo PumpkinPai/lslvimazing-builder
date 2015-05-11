@@ -209,6 +209,7 @@ if __name__ == "__main__":
             subprocess.call('git commit -m "Update auto-commit"', shell=True)
             subprocess.call('git push origin master', shell=True)
         except Exception as e:
+            print(str(e))
         try:
             curDir = os.getcwd()
             lslvimDir = curDir + '/lslvimazing'
