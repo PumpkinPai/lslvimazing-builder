@@ -205,6 +205,11 @@ if __name__ == "__main__":
     userResp = input('Would you like to commit changes to your repo? (y/n)')
     if str(userResp).lower()[0] == 'y':
         try:
+            subprocess.call('git add .', shell=True)
+            subprocess.call('git commit -m "Update auto-commit"', shell=True)
+            subprocess.call('git push origin master', shell=True)
+        except Exception as e:
+        try:
             curDir = os.getcwd()
             lslvimDir = curDir + '/lslvimazing'
             os.chdir(lslvimDir)
