@@ -154,7 +154,6 @@ def generateSyntax():
         manualTxt = manualTxt.replace(delim[0] + replacement + delim[1], srcTxt)
 
     manualTxt = manualTxt.replace('LASTUPDATE', str(date.today()))
-    # todo- insert last update into README.md file
     readmeSrc = open('LSL_Readme.txt', 'r')
     readmeTxt = readmeSrc.read()
     readmeTxt = readmeTxt.replace('LASTUPDATE', str(date.today()))
@@ -170,7 +169,6 @@ def generateSyntax():
 
 # Create directories and cp plug-* files to proper files and locations 
 def stuffFiles():
-    # todo- change dir up one level so it can be pushed directly to git
     for r in conf['structure']:
         directory = r['directory']
         filename    = r['filename']
