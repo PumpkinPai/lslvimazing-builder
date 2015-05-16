@@ -200,8 +200,8 @@ if __name__ == "__main__":
     stuffFiles()
 
     print('Done building latest plugin.')
-    userResp = input('Would you like to commit changes to your repo? (y/n)')
-    if str(userResp).lower()[0] == 'y':
+    # userResp = input('Would you like to commit changes to your repo? (y/n)')
+    if True: # str(userResp).lower()[0] == 'y':
         try:
             subprocess.call('git add .', shell=True)
             subprocess.call('git commit -m "Update auto-commit"', shell=True)
