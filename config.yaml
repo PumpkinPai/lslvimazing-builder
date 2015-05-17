@@ -6,19 +6,19 @@ language: Linden Scripting Language (LSL)
 editor: vim
 structure:
 - name: ftdetect  
-  source: plug-ftdetect.txt
+  source: plug-ftdetect.vim
   filename: lsl.vim
   directory: lslvimazing/ftdetect/
 - name: ftplugin
-  source: plug-ftplugin.txt
+  source: plug-ftplugin.vim
   filename: lsl.vim
   directory: lslvimazing/ftplugin/
 - name: indent
-  source: plug-indent.txt
+  source: plug-indent.vim
   filename: lsl.vim
   directory: lslvimazing/indent/
 - name: syntax
-  source: plug-syntax.txt
+  source: plug-syntax.vim
   filename: lsl.vim
   directory: lslvimazing/syntax/
 - name: root
