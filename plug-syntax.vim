@@ -2,7 +2,11 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
+<<<<<<< HEAD:plug-syntax.txt
 " Last update: 2015-05-21
+=======
+" Last update: 2015-05-19
+>>>>>>> c8163435d2d29c5691aef7ef70d10ceeb18cd5ba:plug-syntax.vim
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim

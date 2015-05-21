@@ -137,9 +137,9 @@ def getReplacements(txt, delim):
 def generateSyntax():
 
     # Simple types will be manual
-    # LSL_Manual.txt also forms the main template and holds the pain in the
+    # LSL_Manual.vim also forms the main template and holds the pain in the
     # butt regex stuff and vim syntax references
-    manualFile    = open('LSL_Manual.txt', 'r')
+    manualFile    = open('LSL_Manual.vim', 'r')
     manualTxt     = manualFile.read()
     manualFile.close
     delim = ['!!', '!!']
@@ -163,7 +163,7 @@ def generateSyntax():
     readmeFile.close
 
 
-    syntaxFile = open('plug-syntax.txt', 'w')
+    syntaxFile = open('plug-syntax.vim', 'w')
     syntaxFile.write(manualTxt)
     syntaxFile.close
 
