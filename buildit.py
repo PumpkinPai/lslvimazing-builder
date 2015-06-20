@@ -107,7 +107,7 @@ def scrapeDeps():
             try:
                 src.remove(dep)
             except: pass
-            print('Removing deprecation from' + srcFilename + ': ' + dep)
+            print('Removing deprecation from: ' + srcFilename + ': ' + dep)
 
         srcTxt = '\n'.join(src)
         srcFile.close
