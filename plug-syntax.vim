@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-09-29
+" Last update: 2016-01-28
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -731,6 +731,7 @@ syn keyword lslConstant
 \ OBJECT_HOVER_HEIGHT
 \ OBJECT_LAST_OWNER_ID
 \ OBJECT_NAME
+\ OBJECT_OMEGA
 \ OBJECT_OWNER
 \ OBJECT_PATHFINDING_TYPE
 \ OBJECT_PHANTOM
@@ -805,6 +806,9 @@ syn keyword lslConstant
 \ PARCEL_MEDIA_COMMAND_UNLOAD
 \ PARCEL_MEDIA_COMMAND_URL
 \ PASSIVE
+\ PASS_ALWAYS
+\ PASS_IF_NOT_HANDLED
+\ PASS_NEVER
 \ PATROL_PAUSE_AT_WAYPOINTS
 \ PAYMENT_INFO_ON_FILE
 \ PAYMENT_INFO_USED
@@ -1119,7 +1123,7 @@ syn region lslString display
 syn match lslStringEscape display
 \ /\\t\|\\n/
 
-syn region lslBlock display
+syn region lslBlock
 \ start='{' end='}' fold transparent contains=ALL
 
 syn region lslParen display
