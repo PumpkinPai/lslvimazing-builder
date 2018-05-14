@@ -226,6 +226,7 @@ llListRandomize
 llListReplaceList
 llListSort
 llListStatistics
+llRequestUserKey
 llLoadURL
 llLog
 llLog10
@@ -242,6 +243,7 @@ llMinEventDelay
 llModifyLand
 llModPow
 llMoveToTarget
+llName2Key
 llNavigateTo
 llOffsetTexture
 llOpenRemoteDataChannel
@@ -371,6 +373,7 @@ llSetVelocity
 llSHA1String
 llShout
 llSin
+llSitOnLink
 llSitTarget
 llSleep
 llSqrt
