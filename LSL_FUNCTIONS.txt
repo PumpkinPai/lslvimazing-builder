@@ -131,6 +131,7 @@ llGetNotecardLine
 llGetNumberOfNotecardLines
 llGetNumberOfPrims
 llGetNumberOfSides
+llGetObjectAnimationNames
 llGetObjectDesc
 llGetObjectDetails
 llGetObjectMass
@@ -226,6 +227,7 @@ llListRandomize
 llListReplaceList
 llListSort
 llListStatistics
+llRequestUserKey
 llLoadURL
 llLog
 llLog10
@@ -242,6 +244,7 @@ llMinEventDelay
 llModifyLand
 llModPow
 llMoveToTarget
+llName2Key
 llNavigateTo
 llOffsetTexture
 llOpenRemoteDataChannel
@@ -371,14 +374,17 @@ llSetVelocity
 llSHA1String
 llShout
 llSin
+llSitOnLink
 llSitTarget
 llSleep
 llSqrt
 llStartAnimation
+llStartObjectAnimation
 llStopAnimation
 llStopHover
 llStopLookAt
 llStopMoveToTarget
+llStopObjectAnimation
 llStopSound
 llStringLength
 llStringToBase64
