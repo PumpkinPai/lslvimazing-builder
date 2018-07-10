@@ -27,6 +27,10 @@ def crawl(url, pageBegin, pageEnd, searchTerm, delim, squash, txtFile):
             print('Going to: ' + url+multiQuery)
             response = urllib.request.urlopen(url+multiQuery)
             html = str(response.read())
+            #print('ERR:' + html[0:10])
+            #if tolower(html[0:9]) == "http error":
+            #    print('Error getting page:' + html[0:15])
+            #    exit()
 
             # PAGEBEGIN TO PAGEEND
             # Make it just the sweet nectar within pageBegin and pageEnd
