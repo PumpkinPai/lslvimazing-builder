@@ -1168,6 +1168,8 @@ syn match lslOperator display
 \ /\/\(\/\)@!/
 
 " HIGHLIGHTING "
+highlight default link lslPreprocessorCommand Conditional
+
 highlight default link lslTodo          Todo
 highlight default link lslDebug         Special
 highlight default link lslComment       Comment
