@@ -31,6 +31,10 @@ syntax keyword lslTodo
 syntax keyword lslDebug
 \ debug Debug DEBUG temp Temp TEMP
 
+" PREPROCESSOR "
+syntax match lslPreprocessorCommand
+\ /#define.*\|#undef.*\|#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*\|#warning.*\|#error.*\|#include.*/
+
 " FUNCTIONS "
 syn keyword lslFunction
 \ llAbs
